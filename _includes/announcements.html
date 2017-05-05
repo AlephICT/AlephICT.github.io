@@ -1,0 +1,31 @@
+    <section id="announcements">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Obaveštenja</h2>
+                    <h3 class="courses-subheading text-muted">Aktuelne informacije vezane za kurseve.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        {% for announcement in site.announcements %}
+                        <li {% if announcement.side == 'right' %}class="timeline-inverted"{% endif %}>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/obavestenja/{{ announcement.image }}" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="subheading">{{ announcement.title }}</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted text-justified">{{ announcement.text }}</p>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>

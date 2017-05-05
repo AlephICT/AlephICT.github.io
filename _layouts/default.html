@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+    <body id="page-top" class="index">
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    {% include navbar.html %}
+    {% include header.html %}
+    {% include courses.html %}
+    {% include nextCourses.html %}
+    {% include announcements.html %}
+    {% include location.html %}
+    {% include footer.html %}
+    {% include js.html %}
+
+    </body>
+</html>

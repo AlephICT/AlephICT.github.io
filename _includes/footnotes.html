@@ -1,0 +1,8 @@
+<p class="footnotes">
+	{% for footnote in site.site_foosnotes %}
+	<span class="priceSpan">*</span> <span id="{{ footnote.id }}">{{ footnote.text }}</span><br>
+	{% endfor %}
+	{% for footnote in page.footnotes %}
+	<span class="priceSpan">*</span> <span id="{{ footnote.id }}">{{ footnote.text }}</span><br>
+	{% endfor %}
+</p>

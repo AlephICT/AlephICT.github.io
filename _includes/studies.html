@@ -1,0 +1,27 @@
+<div>
+	<p class="text-muted text-justified">
+        Program produžene obuke omogućuje sticanje bazičnih znanja iz programiranja, softverskog inženjerstva i veb programiranja, tipično zahtevana na IT tržištu. 
+    </p>
+    <p class="text-muted text-justified">
+        Obuka se sastoji iz dva dela - uvodnog i naprednog modula. 
+        Ukupno trajanje jednog modula je oko 4 meseca. Oba modula imaju po 90 školskih časova, a nastava se izvodi u dva termina nedeljno.
+    </p>
+    <p class="text-muted text-justified">
+        Polaznici sa predznanjem gradiva uvodnog modula mogu direktno da se prijave za napredni modul. Za polaznike koji su završili Aleph kurs Osnova programiranja, omogućena je besplatna priprema za napredni modul, koja pokriva teme uvodnog modula koje nisu obrađivane na kursu Osnova programiranja.
+    </p>
+    {% for lesson in site.lessonflow %}
+    <div class="row lesson_row">
+        <div class="col-sm-2 col-sm-offset-2">
+            <i class="fa text-primary fa-4x {{lesson.icon}}"></i>
+        </div>
+        <div class="col-sm-8">
+            <h4 class="service-heading">{{lesson.text}}</h4>
+        </div>
+    </div>    
+    {% endfor %}
+    
+    <p style="margin-top:2em">
+        Više o organizaciji nastave i proceduri prijave možete naći 
+        <a class="readMore" href="/vebprogramiranje/">ovde</a>.
+    </p>
+</div>

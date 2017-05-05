@@ -1,0 +1,293 @@
+---
+#	Aleph ICT custom styles
+---
+
+@import 'mixins';
+$primaryColor:	#ec7263;
+$text_grey: #999;
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+@-ms-viewport{
+  width: device-width;
+}
+
+.navbar, .navbar div { height: 4em; }
+.navbar-brand { 
+	font-size: 2.2em;
+	padding-left: 15px;
+    padding-top: 3px;
+}
+.navbar-fixed-top .navbar-brand { line-height: normal; }
+.navbar-shrink .navbar-brand { line-height: 38px; }
+
+.site_logo {
+	float: left;
+	height: 70%;
+	width: auto;
+	margin-right: .5em;
+}
+
+.navbar-nav > li > a {
+    padding-bottom: 10px !important;
+    padding-top: 10px !important;
+}
+
+.btn:hover { background: #a75265; }
+.readMore { font-weight: bold; }
+
+.imageHolder {
+	width: 160px;
+	height: 160px;
+	border-radius: 50%; 
+	margin: 0 auto .7em;
+	overflow: hidden;
+	@include scale_fix();
+}
+
+.team_img {
+	vertical-align: middle;
+	height: 100%;
+	cursor: pointer; 
+	@include transition(all, 300);
+}
+
+.activeImage { 
+	@include scale(1.15); 
+}
+
+.team_bio { 
+	display: none; 
+	text-align: justify;
+	margin-top: 1em !important;
+}
+
+.wider_container {
+	width: 85%;
+}
+
+.contact_columns {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.footnotes {
+	margin-top: 7em;
+	margin-bottom: -9em;
+	color: $text_grey;
+}
+
+.course_col {
+	min-height: 24em;
+}
+
+.courses-subheading {
+	margin-bottom: 1em;
+    text-transform: none;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.lesson_row {
+	margin-bottom: .5em;
+}
+
+.course_category {
+	padding: 2em;
+}
+
+.btn-next-course {
+    padding: 20px 40px;
+    border-color: #{{ site.color.primary }};
+    border-radius: 3px;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    width: 500px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.btn-waiting-course {
+	height: 290px;
+}
+
+#contact {
+	h2 { text-align:  center; }
+	h3 { 
+		text-align:  center; 
+		color: #ccc; 
+		font-size: 1.2em;
+	}
+	
+	.contact-person-container {
+		float: right;
+		margin-right: 1em;
+
+		.contact-img-container {
+			border-radius: 50%;
+			width: 120px;
+			height: 120px;
+			float: left;
+			overflow: hidden;
+			margin-left: 25px;
+			@include scale_fix();
+
+			img {
+				height: 100%;
+				@include transition(all, 300);
+				&:hover {
+					@include scale(1.15);
+				}
+			}
+		}
+
+		.contact-name {
+			color: $text_grey;
+			text-align: center;
+		}
+	}
+
+	.contact_container {
+		float: right;
+		clear: both;
+		font-size: 1.1em;
+		border-top: 1px solid $text_grey;
+		margin-top: 1em;
+
+		.contactLabel {
+			float: left;
+			clear: left;
+			color: #fff;
+			text-align: left;
+		}
+
+		.contactData {
+			float: right;
+			clear: right;
+			color:	$primaryColor;
+			text-align: right;
+			font-weight: bold;
+		}
+
+		.contactDataLoc {
+			@extend .contactData;
+			color: #ccc;
+		}
+
+		.locationData {
+			width: 100%;
+			float: left;
+			text-align: right;
+			color: #ccc;
+		}
+
+	}
+
+	.google_map {
+		height: 30em;
+    	width: 45em;
+	}
+}
+
+footer {
+	.footer_buttons {
+		display: inline-block;
+		float: left;
+		margin-top: 10px;
+	}
+
+	.gplus {
+		margin-left: 1em;
+	}
+
+	span.copyright {
+		float: right;
+	}
+
+	span.counter {
+		float: right;
+		clear: both;
+	}
+}
+
+@media screen and (max-width: 2000px) {
+	#contact {
+		.contact_columns {
+			width: 125%;
+		}
+
+		.google_map {
+			height: 20em;
+			width: 30em;
+		}
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	#contact {
+		.contact_container {
+			width: 75%;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) { 
+
+	#contact {
+		.contact_columns {
+			width: 100%;
+		}
+
+		.contact_container {
+			width: 80%;
+		}
+
+		.contact_info_container {
+			font-size: 0.9em;
+		    margin: 0 auto 4em;
+		    width: 65%;
+		}
+	}
+
+}
+
+
+@media screen and (max-width: 800px) {
+	#contact {
+		.google_map {
+			margin-top: 2em;
+			height: 25em;
+			width: 100%;
+		}
+		.contact_container {
+			font-size: 1em;
+		}
+	}
+
+	.navbar, .navbar div {
+	    height: auto;
+	}
+
+	.site_logo {
+		height: 3.9em;
+		margin-left: .5em;
+	}
+}
+
+@media screen and (max-width: 660px) {
+	#contact {
+		.contactLabel { margin-top: .5em; }
+
+		.contactLabel, .contactData, .locationData {
+			width: 100%;
+			text-align: center !important;
+			float: none;
+		}
+	}
+}

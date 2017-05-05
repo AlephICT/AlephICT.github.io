@@ -1,0 +1,47 @@
+---
+#	Aleph ICT custom styles: Course page
+---
+
+.navbar-default { 
+	background: #333 !important; 
+	padding-top: 10px !important;
+
+	.navbar-brand {
+	    font-size: 1.5em !important;
+	    line-height: normal !important;
+	}
+
+	#bs-example-navbar-collapse-1 {
+		// display: none !important;
+	}
+}
+
+h1.courseTitle {
+	text-align: center;
+	margin: 1em 0;
+}
+
+h2.courseSubtitle {
+	text-transform: none;
+	font-size: 1.5em;
+	margin: 1em 0;
+}
+
+h3 {
+	text-transform: none;
+	font-size: 1.2em;
+	color: #666;
+}
+
+.courseIcon {
+	display: block;
+	margin: 0 auto;
+}
+
+p { 
+	text-align: justify;
+}
+
+.priceSpan {
+	color: #ec7263;
+}

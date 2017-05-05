@@ -1,0 +1,333 @@
+url: http://aleph.rs
+markdown: kramdown
+permalink: pretty
+sass:
+  sass_dir: css
+  style: compressed
+
+# Opsti podaci
+title:  Aleph Kursevi
+name:   Aleph
+description: "Centar za obrazovanje u oblasti informaciono komunikacionih tehnologija Aleph u saradnji sa Katedrom za informatiku Fakulteta tehničkih nauka u Novom Sadu i kompanijom Levi9 IT Services organizuje kurseve osnovnog i naprednog programiranja."
+contact_phone:  063/514-171 (radnim danom 12:00-15:00)
+contact_email:  javawebdevcourse@gmail.com
+contact_addr:   Bulevar Mihajla Pupina 4a
+contact_city:   Novi Sad
+contact_desc:   'Zgrada Univerziteta Singidunum'
+contact-persons:
+- name: Nikola Vlahović
+  photo: nikola_vlahovic.jpg
+- name: Aleksandar Bošnjak
+  photo: aleksandar_bosnjak.jpg
+
+# Boje
+color:
+  primary: ec7263
+  secondary: ec7263  
+  secondary-dark: 333
+
+# Imena, slike i biografije predavača:
+# Svaki predavac ima kolekciju kurseva na kojima predaje ('courses'). Sadrzaj te kolekcije odredjuje na stranicama kojih kurseva ce se pojaviti.
+# Pored ovoga, svaka od stranica kurseva ima kao 'course_id' navedenu svoju skracenicu za kurs.
+# SKRACENICE ZA KURSEVE: osnove, jwd, fed, test, android, webp
+people:
+- name: Milan Segedinac
+  pic:  milan_segedinac.jpg
+  bio:  'Dr Milan Segedinac je docent na Fakulte­­­­tu tehni­­č­kih nauka. Od 2009. godine učestvuje u održavanju nastave na Fakultetu tehničkih nauka, kroz šta je stekao iskustvo u obrazovnom radu. Oblasti naučnog interesovanja su mu Semantički Web i Elektronski podržano učenje i autor je preko trideset naučnih radova. Pored angažovanja u nastavi i u načuno-istraživačkim projektima, od 2008. godine učestvovao je u realizaciji preko deset komercijalnih projekata kao senior programer, team leader i sistem arhitekta.'
+  courses:  webp, jwd
+
+- name: Željko Vuković
+  pic:  zeljko_vukovic.jpg
+  bio:  'MSc Željko Vuković je asistent na Fakultetu tehničkih nauka. Oblasti naučnog interesovanja su mu Model-driven engineering i integracija poslovnih sistema. Student je doktorskih studija na FTN. Učestvovao je u realizaciji više projekata namenjenih domaćim preduzećima. Dugi niz godina je bio član Udruženja studenata elektrotehnike Evrope, EESTEC LC Novi Sad.'
+  courses: jwd
+
+- name: Valentin Penca
+  pic:  valentin_penca.jpg
+  bio:  'Dr Valentin Penca je docent na Fakultetu tehničkih nauka. Iskustvo u obrazovnoj praksi stekao je držeći nastavu na Fakultetu tehničkih nauka počevši od 2008. godine. Predavač ima ogromna iskustva u izvođenju kurseva iz oblasti proceduralnog, objektno-orijentisanog i veb programiranja. Pored angažovanja u nastavi, predavač u velikoj meri učestvuje u realizaciji najrazličitijih naučno-istraživačkih i komercijalnih projekata. Oblasti naučnog i profesionalnog interesovanja su mu distribuirani sistemi i sistemi pretraga podataka.'  
+  courses: jwd
+
+- name: Siniša Nikolić
+  pic:  sinisa_nikolic.jpg
+  bio:  'MSc Siniša Nikolić je asistent na Fakultetu tehničkih nauka. Od 2008. godine učestvuje u održavanju nastave na Fakultetu tehničkih nauka, gde je stekao predavačko iskustvo. Na strukovnim i akademskim studijama smerova Sоftvеrskе infоrmаciоnе tеhnоlоgiје i Sоftvеrskо inžеnjеrstvо i infоrmаciоnе tеhnоlоgiје držao je nastavu iz predmeta Objektno programiranje koje sada predaje na kursu Java Web Development. Autor je 17 publikovanih naučnih radova. Učestvovao je u izradi više stručnih i naučnih projekata.'
+  courses: jwd
+
+- name: Goran Savić
+  pic:  goran_savic.jpg
+  bio:  'Dr Goran Savić je docent na Fakultetu tehničkih nauka. Iskustvo u nastavnom radu ima od 2008. godine od kada učestvuje u održavanju nastave na Fakultetu tehničkih nauka. Oblasti naučnog interesovanja su mu Web development i Elektronski podržano učenje i autor je preko trideset naučnih radova. Pored angažovanja u nastavi i naučno-istraživačkim projektima, od 2007. godine učestvovao je u realizaciji preko deset komercijalnih projekata kao senior programer, vođa tima i sistem arhitekta.'
+  courses: webp, jwd
+
+- name: Goran Sladić
+  pic:  goran_sladic.jpg
+  bio:  'Dr Goran Sladić je docent na Fakultetu tehničkih nauka, Univerzitet u Novom Sadu. Od 2002. godine učestvuje u izvođenju nastave na Fakultetu tehničkih nauka. Oblasti naučnog interesovanja su mu informaciona bezbednost, elektornsko poslovanje, upravljanje elektronskim dokumentima i poslovnim procesima. Učestvovao je na više od 30 naučnih i stručnih (komercijalnih) projekata. Autor je preko 50 naučnih radova u međunarodnim i domaćim časopisima i konferencijama kao i dve monografije.'
+  courses: osnove
+
+- name: Stevan Gostojić
+  pic:  stevan_gostojic.jpg
+  bio:  'Dr Stevan Gostojić je docent na Fakultetu tehničkih nauka. Od 2007. godine učestvuje u održavanju nastave na Fakultetu tehničkih nauka, kroz šta je stekao iskustvo u obrazovnom radu. Oblasti naučnog interesovanja su mu Semantički Web i pravna informatika i autor je preko dvadeset naučnih radova. Pored angažovanja u nastavi i u načuno-istraživačkim projektima, od 2005. godine učestvovao je u realizaciji preko deset komercijalnih projekata.'
+  courses: android
+
+- name: Jelena Slivka
+  pic:  jelena_slivka.jpg
+  bio:  'Dr Jelena Slivka od 2009. godine učestvuje u održavanju nastave na Fakultetu tehničkih nauka i trenutno je zaposlena u zvanju docenta. Uža oblast naučnog interesovanja joj je analiza i istraživanje podataka. Autor je 11 publikovanih naučnih radova i učestvovala je u izradi više stručnih i naučnih projekata. Pored angažovanja u nastavi i u načuno-istraživačkim projektima provela je jednu godinu na naučnom usavršavanju na univerzitetu Temle university u Filadelfiji, USA gde je bila uključena u DARPA projekat pod nazivom Prospective Analysis of Large and Complex Partially Observed Temporal Social Networks.'
+  courses: fed
+
+- name: Milorad Filipović
+  pic:  milorad_filipovic.png
+  bio:  'MSc Milorad Filipović je zaposlen kao saradnik u nastavi Fakulteta tehničkih nauka od 2010. godine. Pored ostalih kurseva, poslednje 3 godine učestvuje u organizaciji i izvođenju nastave na kursu Web dizajn za smerove Softversko inženjerstvo i Animacija u inženjerstvu na Fakultetu tehničkih nauka. Oblasti naučnog interesovanja su mu Metodologije brzog razvoja softvera i Jezici specifični za domen u okviru kojih je učestvovao u izradi preko 10 naučnih radova. Pored naučno-istraživačkog rada, učestvovao je u izradi komercijalnih softverskih rešenja, uglavnom baziranih na web tehnologijama.'
+  courses: fed
+
+- name: Nikola Luburić
+  pic:  nikola_luburic.jpg
+  bio:  'MSc Nikola Luburić je asistent na Fakultetu tehničkih nauka. Od 2014. godine učestvuje u održavanju nastave na Fakultetu tehničkih nauka gde je stekao iskustvo u obrazovnom radu. Oblasti naučnog interesovanja su mu veb programiranje i distribuirani sistemi. Pored angažovanja u nastavi učestvovao je u realizaciji nekoliko komercijalnih projekata.'
+  courses: fed
+
+- name: Miroslav Zarić
+  pic:  miroslav_zaric.jpg
+  bio:  'Dr Miroslav Zarić je docent na Fakultetu tehničkih nauka. Ima višegodišnje iskustvo u nastavi i komercijalnim projektima. Autor je većeg broja naučnih radova. Oblasti interesovanja su mu veb dizajn, front-end web development, sistemi za pretragu podataka i sistemi za upravljanje poslovnim procesima.'
+  courses: fed
+
+- name: Sebastijan Kaplar
+  pic:  sebastijan_kaplar.jpg
+  bio:  'MSc Sebastijan Kaplar je zaposlen kao asistent na Fakultetu tehničkih nauka. Od 2014. godine učestvuje u održavanju nastave na smeru Softverskog inženjerstva i informacionih tehnologija na Fakultetu tehničkih nauka. Oblasti naučnog interesovanja su mu inženjerstvo upravljano modelima, programiranje mobilnih sistema i uređaja i veb programiranje. Autor je nekoliko naučnih radova i učestvovao je na izradi komercijalnih i naučno-istraživačkih projekata.'
+  courses: fed
+
+- name: Bojana Zoranović
+  pic:  bojana_zoranovic.jpg
+  bio:  'Bojana Zoranović je saradnik u nastavi na Fakultetu tehničkih nauka. Od 2016. godine učestvuje u održavanju nastave na Fakultetu tehničkih nauka gde je stekla iskustvo u obrazovnom radu. Oblasti naučnog interesovanja su joj Jezici specifični za domen i Metodologije brzog razvoja softvera. Autor je nekoliko naučnih radova.'
+  courses: osnove
+
+- name: Željko Ivković
+  pic:  default.jpg
+  bio:  'Biografija trenutno nije dostupna.'
+  courses: android
+
+- name: Lazar Nikolić
+  pic:  default.jpg
+  bio:  'Biografija trenutno nije dostupna.'
+  courses: android
+
+- name: Miloš Simić
+  pic:  default.jpg
+  bio:  'Biografija trenutno nije dostupna.'
+  courses: android
+
+- name: Aleksandar Kaplar
+  pic:  aleksandar_kaplar.jpg
+  bio:  'MSc Aleksandar Kaplar je zaposlen kao asistent na Fakultetu tehničkih nauka, gde od 2014. godine učestvuje u održavanju nastave. Oblasti naučnog interesovanja su mu veštačka inteligencija, mašinsko učenje, web programiranje i inteligentni agenti. '
+  courses: fed
+
+- name: Milan Stojkov
+  pic:  default.jpg
+  bio:  'Biografija trenutno nije dostupna.'
+  courses: snove
+
+- name: Renata Vaderna
+  pic:  renata_vaderna.jpg
+  bio:  'MSc Renata Vaderna je asistent na Fakultetu tehničkih nauka, gde od 2013. godine učestvuje u izvođenju nastave. Oblasti interesovanja su joj brzi razvoj softvera, jezici specifični za domen, poslovni sistemi i vizualizacija grafova. Autor je većeg broja naučnih radova i učestvovala je u realizaciji nekoliko komercijalnih projekata. Trenutno je student je završne godine doktorskih studija.'
+  courses: jwd
+
+- name: Novak Boškov
+  pic:  novak_boskov.jpg
+  bio:  'Novak Boškov je saradnik u nastavi na Fakultetu tehničkih nauka gde od 2015. godine učestvuje u nastavi. Tokom studiranja i rada na fakultetu bavi se tehnikama razvoja softvera, programskim jezicima, funkcionalnim programiranjem i alatima.'
+  courses: test
+
+- name: Ivan Perić
+  pic:  ivan_peric.jpg
+  bio:  'Ivan Perić je trenutno zaposlen kao saradnik u nastavi na Fakultetu tehničkih nauka. Od 2015. godine učestvuje u održavanju nastave na grupi predmeta iz oblasti veštačke inteligencije i inteligentnih sistema. Oblasti naučnog interesovanja su mu informacioni sistemi, računarska vizija i istraživanje i analiza podataka. Autor je nekoliko naučnih radova i učestvovao je u izradi nekoliko komercijalnih i naučno-istraživačkih projekata.'
+  courses: test
+
+- name: Miroslav Kondić
+  pic:  miroslav_kondic.JPG
+  bio:  'Miroslav Kondić je trenutno zaposlen kao saradnik u nastavi na Fakultetu tehničkih nauka. Od 2015. godine učestvuje u održavanju nastave na grupi predmeta iz oblasti veštačke inteligencije i inteligentnih sistema. Oblasti naučnog interesovanja su mu informacioni sistemi, računarska vizija i istraživanje i analiza podataka. Autor je nekoliko naučnih radova. Učestvovao je u izradi nekoliko komercijalnih i naučno-istraživačkih projekata kao web i test developer.'
+  courses: test
+
+- name: Stefan Anđelić
+  pic:  default.jpg
+  bio:  'Biografija trenutno nije dostupna.'
+  courses: test
+
+- name: Nikola Nikolić
+  pic:  nikola_nikolic.jpg
+  bio:  'MSc Nikola Nikolić je asistent na Fakultetu tehničkih nauka na Univerzitetu u Novom Sadu. Od 2012. godine učestvuje u održavanju nastave na Fakultetu tehničkih nauka, kroz šta je stekao iskustvo u obrazovnom radu. Oblasti naučnog interesovanja su mu semantički informacioni sistemi i istraživanje i analiza podataka. Autor je nekoliko naučnih radova i učestvovao je u izradi komercijalnih i naučno-istraživačkih projekata.'
+  courses: dotnet
+
+- name: Vukan Turkulov
+  pic:  default.jpg
+  bio:  'Biografija trenutno nije dostupna.'
+  courses: dotnet
+
+- name: Aleksandar Bošnjak
+  pic:  default.jpg
+  bio:  'Biografija trenutno nije dostupna'
+  courses: dotnet
+
+- name: Aleksandar Lukić
+  pic:  default.jpg
+  bio:  'Biografija trenutno nije dostupna.'
+  courses: dotnet
+
+- name: Dragan Vidaković
+  pic:  default.jpg
+  bio:  'Biografija trenutno nije dostupna.'
+  courses: dotnet
+
+# Kursevi na pocetnoj strani
+courses:
+- name:   Osnove programiranja
+  icon:   fa-rocket
+  url:    '/osnoveprogramiranja/'
+  descr:  'Ovaj kurs preporučujemo svima koji nemaju prethodnog iskustva u programiranju. Na kursu možete steći predznanje, neophodno za kvalitetno praćenje nastave na naprednim kursevima programiranja koje organizujemo. Kurs pokriva osnove proceduralnog programiranja korišćenjem programskog jezika Java.'
+
+- name:   Java Web Development
+  icon:   fa-terminal
+  url:    '/jwd/'
+  descr:  'Ovo je osnovni kurs naprednih web tehnologija. Namenjen je onima koji žele da steknu kompetencije junior full stack developera za razvoj web aplikacija na Java platformi. Kurs pokriva razvoj serverskog dela web aplikacija upotrebom Java tehnologija i klijentskog dela web aplikacija korišćenjem AngularJS frameworka. Preduslov za pohađanje kursa je predznanje iz osnova programiranja u programskim jezicima visokog nivoa (Java, C++, C#, C, Pascal i slično).'
+
+- name:   Front-End Web Development
+  icon:   fa-code
+  url:    '/frontenddevelopment/'
+  descr:  'Ovaj kurs omogućava sticanje kompentecije junior developera za razvoj klijentskog dela web aplikacije. Prvi modul kursa obuhvata koncepte web dizajna, koji će Vas osposobiti za samostalnu izradu internet sajtova. U okviru drugog modula se obučavate za osnovno i napredno JavaScript programiranje i primenu istog u kreiranju dinamičkih web stranica. Treći modul pokriva izradu modernih klijentskih aplikacija, upotrebom AngularJS radnog okvira. Kombinacija ova tri modula obezbeđuje kompetencije neophodne za front end web developera.'
+
+- name:   Test Development
+  icon:   fa-bug
+  url:    '/testdevelopment/'
+  descr:  'Ovo je kurs namenjen onima koji žele da steknu kompetencije junior developera za testiranje web aplikacija. Kurs pokriva osnove testiranja, testiranje serverskog dela web aplikacija, upotrebom Java tehnologija, i testiranje klijentskog dela web aplikacija, korišćenjem Java i JavaScript jezika, kao i AngularJS radnog okvira. Preduslov za pohađanje kursa je predznanje osnova programiranja u programskim jezicima visokog nivoa (Java, C++, C# i slično).'
+
+- name:   Android App Development
+  icon:   fa-android
+  url:    '/androidappdevelopment/'
+  descr:  'Ovo je kurs namenjen onima koji žele da steknu kompetencije Android App Developer. Svaki termin nastave sastoji se iz kraćeg teoretskog dela u kojem se polaznici upoznaju sa bitnim konceptima i većeg broja primera i zadataka kroz koje polaznici primenjuju naučene koncepte u praksi. Za polaznike kursa obezbeđen je računar, mobilni uređaj, potrebni softverski alati i nastavni materijal u elektronskoj formi. Preduslov za pohađanje kursa je predznanje iz osnova programiranja u programskim jezicima visokog nivoa (Java, C++, C# i slično).'
+
+- name:   .NET Web Development kurs
+  icon:   fa-windows
+  url:    '/dotnet/'
+  descr:  'Ovo je osnovni kurs naprednih web tehnologija. Namenjen je onima koji žele da steknu kompetencije junior full stack developera za razvoj web aplikacija na .NET platformi. Kurs pokriva razvoj serverske i klijentske strane web aplikacija upotrebom .NET tehnologija i principa. Preduslov za pohađanje kursa je predznanje iz osnova programiranja u programskim jezicima visokog nivoa (Java, C++, C#, C, Pascal i slično).'
+
+
+#- name:   Veb programiranje
+#  icon:   fa-cogs
+#  url:    '/vebprogramiranje/' 
+#  descr:  'Ovo je kurs produženog formata koji omogućuje sticanje bazičnih znanja iz programiranja, baza podataka, kao i razvoja veb aplikacija u savremenim Java i JavaScript baziranim tehnologijama. Uvodni modul kursa pokriva osnovna znanja proceduralnog i objektnog programiranja, baza podataka, kao i statičkih i dinamičkih veb stranica. Na naprednom modulu se uči razvoj višeslojnih poslovnih veb aplikacija korišćenjem Spring i AngularJS radnih okvira. Polaznici sa predznanjem mogu i direktno da se prijave za napredni modul bez pohađanja uvodnog modula.' 
+
+# Naredni kursevi
+nextCourses:
+
+- name:   Android App Development 4
+  url:    '/androidappdevelopment/'
+  start:  11.09.2017. u 18:00h
+
+- name:   .Net Web Development 2
+  url:    '/dotnet/'
+  start:  04.09.2017. u 18:00h
+
+- name:   Obuka iz veb programiranja
+  url:    '/vebprogramiranje/'
+  start:  05.09.2017. u 18:00h
+
+- name:   Front-End Web Development 12
+  url:    '/frontenddevelopment/'
+  start:  12.09.2017. u 18:00h
+
+- name:   Osnove programiranja 43
+  url:    '/osnoveprogramiranja/'
+  start:  16.12.2017. u 17:45h
+
+- name:   Java Web Development 29
+  url:    '/jwd/'
+  start:  26.03.2018. u 18:00
+
+- name:   Test Development 8
+  url:    '/testdevelopment/'
+  start:  24.03.2018. u 18:00h
+
+# Kursevi za liste cekanja
+waitingCourses:
+- name: Osnove programiranja  
+  list: ['Osnove programiranja 33 (23.05.2017. 17:45)', 'Osnove programiranja 34 (23.05.2017. 19:45)', 'Osnove programiranja 35 (26.05.2017. 17:45)', 'Osnove programiranja 36 (26.05.2017. 19:45)', 'Osnove programiranja 37 (04.09.2017. 17:45)', 'Osnove programiranja 38 (04.09.2017. 19:45)', 'Osnove programiranja 39 (05.09.2017. 17:45)', 'Osnove programiranja 40 (05.09.2017. 19:45)', 'Osnove programiranja 41 (24.10.2016. 17:45)', 'Osnove programiranja 42 (24.10.2016. 19:45)']
+
+- name: Java Web Development  
+  list: ['Java Web Development 23 (11.09.2017.)', 'Java Web Development 24 (12.09.2017.)', 'Java Web Development 25 (23.10.2017.)', 'Java Web Development 26 (18.12.2017.)', 'Java Web Development 27 (19.12.2017.)', 'Java Web Development 28 (10.02.2018.)']
+
+- name: Front end web development  
+  list: ['Front end web development 11 (11.09.2017.)']
+
+- name: Test Development
+  list: ['Test Development 6 (12.09.2017.)', 'Test Development 7 (18.12.2017.)']
+  
+# Obavestenja
+announcements:
+- title:  Dvoumite se koji je kurs odgovarajući za Vas?
+  text:   'Ako niste sigurni koji kurs biste trebali da upišete, kontaktirajte nas kako bismo Vam dali dodatne informacije. Svakog utorka od 12 časova stojimo Vam na raspolaganju za razgovor (uz prethodnu najavu e-mailom). Ukoliko Vam ovaj termin ne odgovara, možete zakazati razgovor u nekom drugom terminu. Nudimo Vam i mogućnost besplatnog testiranja kako biste mogli da utvrdite da li već imate predznanje za učenje naprednih tehnologija.'
+  image:  which_course_2.jpg
+  side:   left
+
+- title:  Zaposlenje u Levi9 i refundacija troškova kursa
+  text:   'Polaznici kurseva naprednih tehnologija (Java Web Development, Front-End Web Development, Test Development, Android app development i Veb programiranje) koji na završnom testiranju ostvare više od 65% bodova, dobijaju poziv na intervju za posao u kompaniji Levi9 IT Services. Polaznicima kurseva Java Web Development, Front-End Web Development, Test Development i Android app development koji dobiju zaposlenje u Levi9, vrši se povrat novca uplaćenog za pohađanje kursa.'
+  image:  levi9.jpg
+  side:   right
+
+# Tok produzene obuke
+lessonflow:
+- text: 'Početak uvodnog modula (septembar 2017.)'
+  icon: fa-circle  
+
+- text: ''
+  icon: fa-long-arrow-down
+
+- text: 'Proceduralno programiranje'
+  icon: fa-keyboard-o
+
+- text: ''
+  icon: fa-long-arrow-down
+
+- text: 'Objektno programiranje'
+  icon: fa-puzzle-piece
+
+- text: ''
+  icon: fa-long-arrow-down
+
+- text: 'Baze podataka'
+  icon: fa-database
+
+- text: ''
+  icon: fa-long-arrow-down
+
+- text: 'Osnove veba'
+  icon: fa-globe
+
+- text: ''
+  icon: fa-long-arrow-down
+
+- text: 'Početak naprednog modula (februar 2018.)'
+  icon: fa-circle
+
+- text: ''
+  icon: fa-long-arrow-down
+
+- text: 'Napredne Java tehnologije'
+  icon: fa-space-shuttle
+
+- text: ''
+  icon: fa-long-arrow-down
+
+- text: 'Arhitektura veb aplikacija'
+  icon: fa-th
+
+- text: ''
+  icon: fa-long-arrow-down
+
+- text: 'Spring radni okvir'
+  icon: fa-leaf
+
+- text: ''
+  icon: fa-long-arrow-down
+
+- text: 'AngularJS radni okvir'
+  icon: fa-cog
+
+
+# Ove fusnote idu na sve stranice kurseva. 
+# Fusnote koje idu na pojedinacne stranice se definisu na tim stranicama (zakomentarisan primer se nalazi na jwd.html)
+site_foosnotes:
+- id: footnote1
+  text: Uslov za realizaciju nekog od planiranih kurseva je potvrda upisa od strane neophodnog broja polaznika.

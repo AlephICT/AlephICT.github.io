@@ -1,0 +1,46 @@
+<!-- Courses Section -->
+    <section id="kursevi">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Kursevi</h2>
+                </div>
+            </div>
+            <div class="row text-center col-lg-12 fa-4x">
+                <i class="fa text-primary fa-hand-o-left"></i>
+                <i class="fa text-primary fa-hand-o-right"></i>
+                 <h3 class="courses-subheading text-muted">Pružamo dva načina obuke za rad u IT sektoru</h3>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 text-center course_category">                 
+                    <h3 class="service-heading">
+                        Intenzivni kursevi
+                    </h3>
+                    <div class="row text-center">
+                        {% for course in site.courses %}
+                        <div>
+                            <a href="{{ course.url }}">
+                                <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                    <i class="fa {{ course.icon }} fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <h4 class="service-heading">{{ course.name }}</h4>
+                            <p class="text-muted text-justified">
+                                {{ course.descr }} <a class="readMore" href="{{ course.url }}">Više...</a>
+                            </p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-md-6 text-center course_category">
+                    <h3 class="service-heading">
+                        Produžena obuka iz Veb programiranja
+                    </h3>
+                    {% include studies.html %}
+                </div>
+            </div>
+            
+        </div>
+    </section>

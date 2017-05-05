@@ -1,0 +1,34 @@
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="{{ "/img/logos/aleph_logo.png" | prepend: site.baseurl }}" class="site_logo">
+                <a class="navbar-brand page-scroll" href="{% if page.is_front_page %}{{ "#page-top" }}{% else %}{{ site.url }}{% endif %}">{{site.name}}</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    {% if page.is_front_page %}
+                    <li class="hidden"><a href="#page-top"></a></li>
+                    <li><a class="page-scroll" href="#kursevi">Kursevi</a></li>
+                    <li><a class="page-scroll" href="#naredni">Naredni kursevi</a></li>
+                    <li><a class="page-scroll" href="#announcements">Obaveštenja</a></li>
+                    <li><a class="page-scroll" href="#contact">Kontakt</a></li>
+                    <li><a class="page-scroll" href="/faq/">FAQ</a></li>
+                    {% else %}
+                    <li><a class="page-scroll" href="#page-top">{{ page.title }}</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>

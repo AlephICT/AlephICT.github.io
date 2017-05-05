@@ -1,0 +1,21 @@
+@mixin scale($value) {
+    -webkit-transform:	scale($value);
+       -moz-transform:	scale($value);
+        -ms-transform:	scale($value);
+         -o-transform:	scale($value);
+            transform:	scale($value);
+}
+
+@mixin transition($prop, $speed) {
+	-webkit-transition: $prop $speed + ms  ease-in-out;
+       -moz-transition: $prop $speed + ms  ease-in-out;
+         -o-transition: $prop $speed + ms  ease-in-out;
+            transition: $prop $speed + ms  ease-in-out;
+}
+
+@mixin scale_fix() {
+	-webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+}
