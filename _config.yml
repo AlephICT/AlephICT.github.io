@@ -176,6 +176,11 @@ people:
   bio:  'Biografija trenutno nije dostupna.'
   courses:  linux
 
+- name: Milan Kerac
+  pic:  default.jpg
+  bio:  'Biografija trenutno nije dostupna.'
+  courses:  linux
+
 # Kursevi na pocetnoj strani
 courses:
 - name:   Osnove programiranja
