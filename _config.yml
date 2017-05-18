@@ -247,9 +247,9 @@ nextCourses:
   url:    '/osnoveprogramiranja/'
   start:  16.12.2017. u 19:45h
 
-- name:   Java Web Development 29
+- name:   Java Web Development 30
   url:    '/jwd/'
-  start:  26.03.2018. u 18:00
+  start:  27.03.2018. u 18:00h
 
 - name:   Test Development 8
   url:    '/testdevelopment/'
@@ -262,7 +262,7 @@ nextCourses:
 # Kursevi za liste cekanja
 waitingCourses:
 - name: Osnove programiranja  
-  list: ['Osnove programiranja 33 (23.05.2017. 17:45)', 'Osnove programiranja 34 (23.05.2017. 19:45)', 'Osnove programiranja 35 (26.05.2017. 17:45)', 'Osnove programiranja 36 (26.05.2017. 19:45)', 'Osnove programiranja 37 (04.09.2017. 17:45)', 'Osnove programiranja 38 (04.09.2017. 19:45)', 'Osnove programiranja 39 (05.09.2017. 17:45)', 'Osnove programiranja 40 (05.09.2017. 19:45)', 'Osnove programiranja 41 (24.10.2016. 17:45)', 'Osnove programiranja 42 (24.10.2016. 19:45)']
+  list: ['Osnove programiranja 37 (04.09.2017. 17:45)', 'Osnove programiranja 38 (04.09.2017. 19:45)', 'Osnove programiranja 39 (05.09.2017. 17:45)', 'Osnove programiranja 40 (05.09.2017. 19:45)', 'Osnove programiranja 41 (24.10.2016. 17:45)', 'Osnove programiranja 42 (24.10.2016. 19:45)']
 
 - name: Java Web Development  
   list: ['Java Web Development 23 (11.09.2017.)', 'Java Web Development 24 (12.09.2017.)', 'Java Web Development 25 (23.10.2017.)', 'Java Web Development 26 (18.12.2017.)', 'Java Web Development 27 (19.12.2017.)', 'Java Web Development 28 (10.02.2018.)']
