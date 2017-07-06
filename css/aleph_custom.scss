@@ -24,11 +24,51 @@ html, body {
 .navbar-fixed-top .navbar-brand { line-height: normal; }
 .navbar-shrink .navbar-brand { line-height: 38px; }
 
-.site_logo {
+.logos{
+    display: inline-block;
+}
+
+.logo{
 	float: left;
-	height: 70%;
+	margin-top: 7em;
+}
+
+.site_logo {
+	height: 10em;
+    display: inline-block;	
+}
+
+.partner_logo {
+	width: 6em;
+	margin: 2%;
+}
+
+.intro-text{
+	clear: both;
+}
+
+.partner-img-container{
+	height: 15em;
+	width: 100%;
+	position: relative;
+}
+
+.partner-img-container img{
+	height: auto;
 	width: auto;
-	margin-right: .5em;
+	max-width: 100%;
+	position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+}
+
+.site_logo_name {
+	font-family: 'Fondamento', cursive;
+    color: #{{ site.color.primary }};
+    font-size: 4em;
 }
 
 .navbar-nav > li > a {
@@ -95,10 +135,30 @@ html, body {
 
 .lesson_row {
 	margin-bottom: .5em;
+	display: flex;
+    align-items: center;
+}
+
+.lesson_title {
+	text-align: left;
+}
+
+.lesson_description {
+	text-align: left;
+	margin-left: 2em;	
 }
 
 .course_category {
 	padding: 2em;
+}
+
+
+.partner-block {
+	float: left;
+	width: 15em;
+	margin-left: 5em;
+	margin-right: 5em;
+	margin-top: 5em;
 }
 
 .btn-next-course {
@@ -273,6 +333,14 @@ footer {
 
 }
 
+@media screen and (max-width: 1000px) {
+	.partner-block {
+		float: initial;
+		display: block;
+		margin-left: auto;
+  		margin-right: auto;
+	}
+}
 
 @media screen and (max-width: 800px) {
 	#contact {
@@ -291,9 +359,18 @@ footer {
 	}
 
 	.site_logo {
-		height: 3.9em;
-		margin-left: .5em;
+		height: 10em;
 	}
+
+	.logo {
+		margin-top: 4.5em;
+	}
+
+	.logo img{
+		display: block;
+		margin: 0.5em;
+	}
+
 }
 
 @media screen and (max-width: 660px) {
@@ -306,4 +383,15 @@ footer {
 			float: none;
 		}
 	}
+}
+
+@media screen and (max-width: 375px) {
+	.logo img{
+		display: none;
+	}
+
+	.logo img.site_logo{
+		display: block;
+	}
+	
 }

@@ -1,0 +1,23 @@
+<section id="zaposlenje">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Zaposlenje</h2>
+                <p class="text-muted large">Program realizujemo u saradnji sa IT kompanijama koje pružaju šansu za praksu i zaposlenje polaznicima obuke.</p>
+            </div>
+        </div>
+        {% for partner in site.partners %}
+        <div class="partner-block">
+            <a href="{{partner.url}}" target="_blank">
+        	   <div class="partner-img-container">
+                	<img src="/img/partners/{{partner.logo}}" class="partner_logo">
+                </div>
+				<div class="text-center">
+                    <h4>{{partner.name}}</h4>
+                </div>
+        	</a>
+        </div>    
+        {% endfor %} 
+        
+    </div>
+</section>

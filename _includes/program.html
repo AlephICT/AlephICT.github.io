@@ -1,0 +1,36 @@
+<!-- Program Section -->
+<section id="program">
+    <div class="container">
+        <div class="row text-center">                            
+            <h2 class="section-heading">
+                Program obuke
+            </h2>
+            
+            <p class="text-muted text-justified large">
+                Obuka omogućuje sticanje bazičnih znanja iz programiranja, softverskog inženjerstva i veb programiranja, tipično zahtevana na IT tržištu.
+            </p>
+            <p class="text-muted text-justified large">
+                Obuka se sastoji iz dva dela - uvodnog i naprednog modula. 
+                Ukupno trajanje jednog modula je oko 4 meseca. Oba modula imaju po 90 školskih časova, a nastava se izvodi u dva termina nedeljno. Termin počinje u 18h i sastoji se od 3 časa. Nastava se izvodi u računarskoj učionici i za svakog polaznika je obezbeđen računar.
+            </p>
+
+             <p class="text-muted text-justified large">
+                Ukupna cena obuke je 1200 evra. Plaćanje se vrši u 4 rate od po 300 evra u dinarskoj protivvrednosti po srednjem kursu NBS na dan uplate.
+            </p>
+
+            {% for lesson in site.lessonflow %}
+            <div class="row lesson_row">
+                <div class="col-sm-2"> </div>
+                <div class="col-sm-2">
+                    <i class="fa text-primary fa-4x {{lesson.icon}}"></i>
+                </div>
+                <div class="col-sm-8">
+                    <h4 class="lesson_title">{{lesson.text}}</h4>
+                    <p class="lesson_description large text-muted">{{lesson.description}}</p> 
+                </div>
+            </div>    
+            {% endfor %} 
+
+        </div>        
+    </div>
+</section>
