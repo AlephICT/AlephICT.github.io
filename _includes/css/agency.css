@@ -553,6 +553,10 @@ section h3.section-subheading {
     text-transform: none;
 }
 
+.timeline .timeline-heading h4.subheading span.red {
+    color: red;
+}
+
 .timeline .timeline-body>p,
 .timeline .timeline-body>ul {
     margin-bottom: 0;
