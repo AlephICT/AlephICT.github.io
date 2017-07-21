@@ -119,7 +119,7 @@ partners:
 
 - name: ComData
   url: http://www.comdata.rs/
-  logo: comdata.jpg
+  logo: comdata.png
 
 - name: M&I Systems, Co.
   url: http://www.mi-system.co.rs/
@@ -128,3 +128,7 @@ partners:
 - name: TIAC group
   url: http://www.tiacgroup.com/
   logo: tiac.png
+
+- name: Synechron
+  url: https://www.synechron.com/
+  logo: synechron.png
