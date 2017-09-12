@@ -132,3 +132,7 @@ partners:
 - name: Synechron
   url: https://www.synechron.com/
   logo: synechron.png
+
+- name: Naovis
+  url: www.naovis.rs
+  logo: naovis.png
