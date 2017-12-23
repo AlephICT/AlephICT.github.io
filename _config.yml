@@ -134,9 +134,9 @@ partners:
   logo: synechron.png
 
 - name: Naovis
-  url: http://www.naovis.rs
+  url: http://www.naovis.rs/
   logo: naovis.png
 
-  name: Intens
+- name: Intens
   url: http://www.intens.rs/
   logo: intens.png
