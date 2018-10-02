@@ -33,7 +33,7 @@ people:
   
 # Tok produzene obuke
 lessonflow:
-- text: 'Početak uvodnog modula (septembar 2018.)'  
+- text: 'Početak uvodnog modula (februar 2019.)'  
   icon: fa-circle  
 
 - text: ''
@@ -67,7 +67,7 @@ lessonflow:
 - text: ''
   icon: fa-long-arrow-down
 
-- text: 'Početak naprednog modula (februar 2019.)'
+- text: 'Početak naprednog modula (septembar 2019.)'
   icon: fa-circle
 
 - text: ''
