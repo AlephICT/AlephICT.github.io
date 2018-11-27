@@ -1,33 +1,37 @@
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-               
-            </div>
+<nav nav-hide>
+  <div class="container-nav " >
+    <div class="logo">
+      <div class="logo-img"><div class="img"></div></div>
+      <div class="title">ALEPH</div>
+    </div>
+    <div class="links">
+      <a class="goCourse">Kurs</a> <a class="goGallery">Galerija</a> <a class="goFaq">FAQ</a>
+      <a class="goContact">Kontakt</a>
+    </div>
+    <div class="menu-button">
+      <div class="button" id="show-nav-big"></div>
+    </div>
+  </div>
+</nav>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    {% if page.is_front_page %}
-                    <li class="hidden"><a href="#page-top"></a></li>
-                    <li><a class="page-scroll" href="#program">Program</a></li>
-                    <li><a class="page-scroll" href="#zaposlenje">Zaposlenje</a></li>
-                    <li><a class="page-scroll" href="#prijava">Prijava</a></li>
-                    <li><a class="page-scroll" href="#announcements">Obaveštenja</a></li>
-                    <li><a class="page-scroll" href="#contact">Kontakt</a></li>
-                    {% else %}
-                    <li><a class="page-scroll" href="#page-top">{{ page.title }}</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+<div class="nav-big-mob" >
+    <div class="container-logo"><div class="logo"></div></div>
+    <div class="container-title"><div class="title">ALEPH</div></div>
+    <div class="container-links">
+      <div id="nav-links" class="links">
+        <a class="goCourse">Kurs</a> <a class="goPrice">Cena</a> <a class="goCompany">Zaposlenje</a>
+        <a class="goFaq">FAQ</a> <a class="goGallery">Galerija</a> <a class="goContact">Kontakt</a>
+      </div>
+    </div>
+    <div id="nav-social" class="container-social">
+      <div class="facebook"></div>
+      <div class="twiter"></div>
+      <div class="google"></div>
+    </div>
+    <div class="container-close">
+      <div class="button" id="hide-nav-big"></div>
+    </div>
+  </div>
+  
+
+
