@@ -1,115 +1,21 @@
 <section class="faq">
   <div class="main">
     <div class="title">FAQ</div>
+    {% for q in site.questions %}
     <div class="container-question">
       <div class="question">
-        <div class="text">Kako se prijavljuje za upis na kurs?</div>
-        <div class="button"></div>
+        <div class="text">{{q.question}}</div>
+        <div class="button answer-button"></div>
       </div>
       <div class="answer" *ngIf="false">
         <div class="text">
           <p>
-            Obuka omogućuje sticanje bazičnih znanja iz programiranja,
-            softverskog inženjerstva i veb programiranja, tipično zahtevana na
-            IT tržištu.
-          </p>
-          <p>
-            Obuka se sastoji iz dva dela - uvodnog i naprednog modula. Ukupno
-            trajanje jednog modula je oko 4 meseca. Oba modula imaju po 90
-            školskih časova, a nastava se izvodi u dva termina nedeljno. Termin
-            počinje u 18h i sastoji se od 3 časa. Nastava se izvodi u
-            računarskoj učionici i za svakog polaznika je obezbeđen računar.
+            {{q.answer}}
           </p>
         </div>
       </div>
     </div>
-    <div class="container-question">
-      <div class="question">
-        <div class="text">Kako se prijavljuje za upis na kurs?</div>
-        <div class="button"></div>
-      </div>
-      <div class="answer">
-        <div class="text">
-          <p>
-            Obuka omogućuje sticanje bazičnih znanja iz programiranja,
-            softverskog inženjerstva i veb programiranja, tipično zahtevana na
-            IT tržištu.
-          </p>
-          <p>
-            Obuka se sastoji iz dva dela - uvodnog i naprednog modula. Ukupno
-            trajanje jednog modula je oko 4 meseca. Oba modula imaju po 90
-            školskih časova, a nastava se izvodi u dva termina nedeljno. Termin
-            počinje u 18h i sastoji se od 3 časa. Nastava se izvodi u
-            računarskoj učionici i za svakog polaznika je obezbeđen računar.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="container-question">
-      <div class="question">
-        <div class="text">Kako se prijavljuje za upis na kurs?</div>
-        <div class="button"></div>
-      </div>
-      <div class="answer" *ngIf="false">
-        <div class="text">
-          <p>
-            Obuka omogućuje sticanje bazičnih znanja iz programiranja,
-            softverskog inženjerstva i veb programiranja, tipično zahtevana na
-            IT tržištu.
-          </p>
-          <p>
-            Obuka se sastoji iz dva dela - uvodnog i naprednog modula. Ukupno
-            trajanje jednog modula je oko 4 meseca. Oba modula imaju po 90
-            školskih časova, a nastava se izvodi u dva termina nedeljno. Termin
-            počinje u 18h i sastoji se od 3 časa. Nastava se izvodi u
-            računarskoj učionici i za svakog polaznika je obezbeđen računar.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="container-question">
-      <div class="question">
-        <div class="text">Kako se prijavljuje za upis na kurs?</div>
-        <div class="button"></div>
-      </div>
-      <div class="answer" *ngIf="false">
-        <div class="text">
-          <p>
-            Obuka omogućuje sticanje bazičnih znanja iz programiranja,
-            softverskog inženjerstva i veb programiranja, tipično zahtevana na
-            IT tržištu.
-          </p>
-          <p>
-            Obuka se sastoji iz dva dela - uvodnog i naprednog modula. Ukupno
-            trajanje jednog modula je oko 4 meseca. Oba modula imaju po 90
-            školskih časova, a nastava se izvodi u dva termina nedeljno. Termin
-            počinje u 18h i sastoji se od 3 časa. Nastava se izvodi u
-            računarskoj učionici i za svakog polaznika je obezbeđen računar.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="container-question">
-      <div class="question">
-        <div class="text">Kako se prijavljuje za upis na kurs?</div>
-        <div class="button"></div>
-      </div>
-      <div class="answer" *ngIf="false">
-        <div class="text">
-          <p>
-            Obuka omogućuje sticanje bazičnih znanja iz programiranja,
-            softverskog inženjerstva i veb programiranja, tipično zahtevana na
-            IT tržištu.
-          </p>
-          <p>
-            Obuka se sastoji iz dva dela - uvodnog i naprednog modula. Ukupno
-            trajanje jednog modula je oko 4 meseca. Oba modula imaju po 90
-            školskih časova, a nastava se izvodi u dva termina nedeljno. Termin
-            počinje u 18h i sastoji se od 3 časa. Nastava se izvodi u
-            računarskoj učionici i za svakog polaznika je obezbeđen računar.
-          </p>
-        </div>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
+ 

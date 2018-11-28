@@ -3,19 +3,16 @@
     <div class="title">Galerija</div>
     <div class="content">
       <div class="container-img">
-        <div class="frame"><img src="/img/Gallery/img_1.jpg" /></div>
-        <div class="frame"><img src="/img/Gallery/img_2.jpg" /></div>
-        <div class="frame"><img src="/img/Gallery/img_3.jpg" /></div>
-        <div class="frame"><img src="/img/Gallery/img_4.jpg" /></div>
-        <div class="frame"><img src="/img/Gallery/img_5.jpg" /></div>
-        <div class="frame"><img src="/img/Gallery/img_6.jpg" /></div>
-        <div class="frame"><img src="/img/Gallery/img_7.jpg" /></div>
-        <div class="frame"><img src="/img/Gallery/img_8.jpg" /></div>
-        <div class="frame"><img src="/img/Gallery/img_9.jpg" /></div>
+
+        {% for image in site.images %} 
+        <div class="frame"><img class="gallery-img {{image.id}}" src="/img/Gallery/img_{{image.id}}.jpg" /></div>
+        {% endfor %}
+
+       
       </div>
       <div class="pagination">
-        <div class="left"></div>
-        <div class="right"></div>
+        <div id="gallery-pre-page" class="left"></div>
+        <div id="gallery-next-page" class="right"></div>
       </div>
     </div>
   </div>

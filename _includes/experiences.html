@@ -1,37 +1,21 @@
 <section class="experiences">
   <div class="main">
-    <div class="left"><div class="icon-left"></div></div>
+    <div class="left"><div id="pre-student" class="icon-left"></div></div>
     <div class="center">
       <div class="title">Šta su rekli programeri koji su završili kurs</div>
-      <div class="text">
-        “ Instrument cultivated alteration any favourable expression law far
-        nor. Both new like tore but year. An from mean on with when sing pain.
-        Oh to as principles devonshire companions unsatiable an delightful. The
-        ourselves suffering the sincerity. ”
-      </div>
-      <div class="student-name">Nikoleta Stamenkovic</div>
+
+      {% for s in site.students %}
+      <div id="{{s.id}}" class="text student-text">{{ s.text }}</div>
+
+      <div id="{{s.id}}" class="student-name">{{ s.name }}</div>
+      {% endfor %}
     </div>
-    <div class="right"><div class="icon-right"></div></div>
+    <div class="right"><div id="next-student" class="icon-right"></div></div>
     <div class="container-students">
       <div class="students">
-        <div class="student">
-          <img src="/img/Students/roger_federer_ver1.png" />
-        </div>
-        <div class="student">
-          <img src="/img/Students/roger_federer_ver1.png" />
-        </div>
-        <div class="student">
-          <img
-            style="opacity: 1;"
-            src="/img/Students/roger_federer_ver1.png"
-          />
-        </div>
-        <div class="student">
-          <img src="/img/Students/roger_federer_ver1.png" />
-        </div>
-        <div class="student">
-          <img src="/img/Students/roger_federer_ver1.png" />
-        </div>
+        {% for s in site.students %}
+        <div id="{{s.id}}" class="student-img"><img src="/img/Students/{{s.id}}.png" /></div>
+        {% endfor %}
       </div>
     </div>
   </div>

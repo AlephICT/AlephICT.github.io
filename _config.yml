@@ -146,3 +146,105 @@ partners:
 - name: LibraFire
   url: http://www.librafire.com/
   logo: librafire.png
+
+
+# Question
+questions:
+- question: Prvo pitanje
+  answer: Prvi odgovor
+
+- question: Drugo pitanje
+  answer: Drugi odgovor
+
+- question: Trece pitanje
+  answer: Treci odgovor
+
+# Companies
+companies:
+- id: leviNine
+  title: Levi Nine
+
+- id: execom
+  title: Execom
+
+- id: vivify
+  title: Vivify
+
+- id: exlrt
+  title: EXLRT
+
+- id: itEngine
+  title: It Engine
+
+- id: comData
+  title: ComData
+
+- id: mi
+  title: M&I System
+
+- id: synechron
+  title: Synechron
+
+- id: naovis
+  title: Naovis
+
+- id: intens
+  title: Intens
+
+- id: libraFire
+  title: LibraFire
+
+# Students
+students:
+- id: 1
+  name: Mladen Potrebic
+  text: Instrument cultivated alteration any favourable expression law far nor. Both new like tore but year. An from mean on with when sing pain. Oh to as principles devonshire companions unsatiable an delightful. The ourselves suffering the sincerity.
+
+- id: 2
+  name: Radoje Radovicic
+  text: Instrument cultivated alteration any favourable expression law far nor. Both new like tore but year. An from mean on with when sing pain. Oh to as principles devonshire companions unsatiable an delightful. The ourselves suffering the sincerity.
+
+- id: 3
+  name: Milan Perisic
+  text: Instrument cultivated alteration any favourable expression law far nor. Both new like tore but year. An from mean on with when sing pain. Oh to as principles devonshire companions unsatiable an delightful. The ourselves suffering the sincerity.
+
+- id: 4
+  name: Stefan Savic
+  text: Instrument cultivated alteration any favourable expression law far nor. Both new like tore but year. An from mean on with when sing pain. Oh to as principles devonshire companions unsatiable an delightful. The ourselves suffering the sincerity.
+
+- id: 5
+  name: Milica Milutinov
+  text: Instrument cultivated alteration any favourable expression law far nor. Both new like tore but year. An from mean on with when sing pain. Oh to as principles devonshire companions unsatiable an delightful. The ourselves suffering the sincerity.
+
+
+# Gallery
+images:
+- id: 1
+
+- id: 2
+
+- id: 3
+
+- id: 4
+
+- id: 5
+
+- id: 6
+
+- id: 7
+
+- id: 8
+
+- id: 9
+
+- id: 10
+
+  
+  
+  
+
+
+
+
+
+

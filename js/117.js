@@ -30,6 +30,9 @@ $("#nav-social").children().click(function(){
     $(".nav-big-mob").hide();
 });
 
+
+// Links
+
 $( ".goCourse" ).click(function() {
     if($(window).width() >620){
         $([document.documentElement, document.body]).animate({
@@ -100,6 +103,106 @@ $( ".goContact" ).click(function() {
         }, 2000);
     }
 });
+
+
+// Question
+
+$( document ).ready(function() {
+    $(".question").next().hide();
+});
+
+
+$(".question").children(".answer-button").click(function() {
+
+    if($(this).parent(".question").next().is(":hidden")){
+        $(this).parent(".question").next().show();
+    }else{
+        $(this).parent(".question").next().hide();
+    }
+});
+
+
+//Experiences
+
+var studentId = 3;
+
+$( document ).ready( loadStudent(studentId));
+
+function loadStudent(x) {
+    $(".student-text").hide();
+    $("#" + x + ".student-text").show();
+    $(".student-name").hide();
+    $("#" + x + ".student-name").show();
+    $(".student-img").children().css({ opacity: "0.3" });
+    $("#" + x + ".student-img").children().css({ opacity: "1" });   
+}
+
+$( "#pre-student" ).click(function() {
+    if(studentId != 1){
+        studentId = studentId - 1;
+    }else{
+        studentId = 5;
+    }
+    loadStudent(studentId);
+});
+
+$( "#next-student" ).click(function() {
+    if(studentId != 5){
+        studentId = studentId + 1;
+    }else{
+        studentId = 1;
+    }
+    loadStudent(studentId);
+});
+
+
+// Gallery
+
+var pageOfGallery = 1;
+var warningLastPage=0
+
+$( document ).ready( loadPhoto(pageOfGallery));
+
+
+function loadPhoto() {
+    from = pageOfGallery * 9 - 8 ;
+    to = pageOfGallery * 9;
+
+    $(".gallery-img").parent().hide();
+
+    for(i = from; i <= to; i++){
+        $(".gallery-img." + i).parent().show();
+        if(!$(".gallery-img." + i).length){
+            warningLastPage=1;
+        }
+    }
+}
+
+
+$( "#gallery-pre-page").click(function() {
+    if(pageOfGallery == 1){
+        return
+    }
+    pageOfGallery = pageOfGallery - 1;
+    loadPhoto();
+});
+
+$("#gallery-next-page").click(function() {
+    if(warningLastPage){
+        warningLastPage = 0;
+        loadPhoto();
+        return
+    }
+    pageOfGallery = pageOfGallery + 1;
+    loadPhoto();
+});
+
+
+
+
+
+
+
 
 
 

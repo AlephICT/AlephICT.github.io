@@ -1065,10 +1065,10 @@ nav {
     }
     .container-company {
       @include grid(25% 25% 25% 25%, auto);
-      height: 410px;
       cursor: pointer;
       .frame {
-        @include grid(auto, calc(100% - 30px) 30px);
+        @include grid(auto, calc(100% - 20px) 120px);
+        margin-top: 10px;
         .logo {
           margin-bottom: -50px;
           justify-self: center;
@@ -1300,7 +1300,7 @@ nav {
       text-align: center;
       justify-self: center;
       .students {
-        .student {
+        .student-img {
           margin: 0px 15px;
           display: inline-block;
           img {
