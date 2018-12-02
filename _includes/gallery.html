@@ -3,12 +3,14 @@
     <div class="title">Galerija</div>
     <div class="content">
       <div class="container-img">
-
-        {% for image in site.images %} 
-        <div class="frame"><img class="gallery-img {{image.id}}" src="/img/Gallery/img_{{image.id}}.jpg" /></div>
+        {% for image in site.images %}
+        <div class="frame-extension frame">
+          <img
+            class="gallery-img {{image.id}}"
+            src="/img/Gallery/img_{{image.id}}.jpg"
+          />
+        </div>
         {% endfor %}
-
-       
       </div>
       <div class="pagination">
         <div id="gallery-pre-page" class="left"></div>
@@ -34,3 +36,4 @@
     </div>
   </div>
 </section>
+

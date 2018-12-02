@@ -163,36 +163,47 @@ questions:
 companies:
 - id: leviNine
   title: Levi Nine
+  number: 1
 
 - id: execom
   title: Execom
+  number: 2
 
 - id: vivify
   title: Vivify
+  number: 3
 
 - id: exlrt
   title: EXLRT
+  number: 4
 
 - id: itEngine
   title: It Engine
+  number: 5
 
 - id: comData
   title: ComData
+  number: 6
 
 - id: mi
   title: M&I System
+  number: 7
 
 - id: synechron
   title: Synechron
+  number: 8
 
 - id: naovis
   title: Naovis
+  number: 9
 
 - id: intens
   title: Intens
+  number: 10
 
 - id: libraFire
   title: LibraFire
+  number: 11
 
 # Students
 students:

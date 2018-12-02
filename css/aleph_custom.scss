@@ -16,8 +16,7 @@ $color-dark: #363046;
 $color-text: #4b4b4c;
 
 // Fonts
-@mixin font-basic()
-{
+@mixin font-basic() {
   font-family: "Roboto", sans-serif !important;
 }
 
@@ -25,16 +24,16 @@ $color-text: #4b4b4c;
 //  RESET
 // ----------------------------------------------------------
 
-body{
+body {
   margin: 0px;
   padding: 0px;
 }
 
-* :focus{
-  outline:0;
+* :focus {
+  outline: 0;
 }
 
-section{
+section {
   margin: 0;
   padding: 0;
 }
@@ -45,16 +44,20 @@ section{
 
 // Font
 
-@mixin font($font-size, $font-color, $font-weight)
-{
+@mixin font($font-size, $font-color, $font-weight) {
   @include font-basic();
   font-size: $font-size;
   color: $font-color;
   font-weight: $font-weight;
 }
 
-@mixin font($font-size, $font-color, $font-weight, $letter-spacing, $font-line-height)
-{
+@mixin font(
+  $font-size,
+  $font-color,
+  $font-weight,
+  $letter-spacing,
+  $font-line-height
+) {
   @include font-basic();
   font-size: $font-size;
   color: $font-color;
@@ -62,95 +65,71 @@ section{
   letter-spacing: $letter-spacing;
   line-height: $font-line-height;
 }
-
 // Grid
-
-@mixin grid($columns, $rows)
-{
+@mixin grid($columns, $rows) {
   display: grid;
-
   grid-template-columns: $columns;
   grid-template-rows: $rows;
 }
-
-@mixin grid-wraper($column-start, $column-end, $row-start, $row-end)
-{
+@mixin grid-wraper($column-start, $column-end, $row-start, $row-end) {
   grid-column-start: $column-start;
   grid-column-end: $column-end;
   grid-row-start: $row-start;
   grid-row-end: $row-end;
 }
-
-@mixin grid-element($ver, $hor)
-{
+@mixin grid-element($ver, $hor) {
   justify-self: $ver;
   text-align: $ver;
   align-self: $hor;
 }
-
 // Image
-
-@mixin background-img($folder, $url, $width, $height)
-{
+@mixin background-img($folder, $url, $width, $height) {
   background: url("/img/#{$folder}/#{$url}") no-repeat;
   background-position: center center;
   background-size: $width $height;
 }
-
-
-
-@mixin img($folder, $url, $width-box, $height-box, $width, $height )
-{
+@mixin img($folder, $url, $width-box, $height-box, $width, $height) {
   display: inline-block;
   width: $width-box;
   height: $height-box;
-
   background: url("/img/#{$folder}/#{$url}") no-repeat center;
   background-size: $width $height;
 }
-
 // Button
-
-@mixin button( $height, $width, $background-color, $border-weight, $border-color, $border-radius)
-{
+@mixin button(
+  $height,
+  $width,
+  $background-color,
+  $border-weight,
+  $border-color,
+  $border-radius
+) {
   height: $height;
   width: $width;
   background-color: $background-color;
   border: $border-weight solid $border-color;
   border-radius: $border-radius;
 }
-
 // Media
-//$wide: #{"only screen and (min-width: 821px)"};
-//$tablet: #{"only screen and (max-width: 820px)"};
-//$mob: #{"only screen and (max-width: 620px)"};
-
+// $wide: #{"only screen and (min-width: 821px)"};
+// $tablet: #{"only screen and (max-width: 820px)"};
+// $mob: #{"only screen and (max-width: 620px)"};
 $wide: "only screen and (min-width: 821px)";
 $tablet: "only screen and (max-width: 820px)";
 $mob: "only screen and (max-width: 620px)";
-
-
 // Test
-
-@mixin test1()
-{
+@mixin test1() {
   background-color: blue;
 }
-
-@mixin test2()
-{
+@mixin test2() {
   background-color: red;
 }
-
-@mixin test3()
-{
+@mixin test3() {
   background-color: green;
 }
-
 // ----------------------------------------------------------
-//  Style
+// Style
 // ----------------------------------------------------------
-
 nav {
   opacity: 0;
   position: fixed;
@@ -171,7 +150,6 @@ nav {
         height: 45px;
         width: 27px;
       }
-
       .title {
         align-self: center;
         margin-left: 10px;
@@ -179,10 +157,8 @@ nav {
         @include font(20px, $color-spot, 400, 4px, 0);
       }
     }
-
     .links {
       @include grid-element(right, center);
-
       a {
         display: inline-block;
         margin-left: 20px;
@@ -197,19 +173,19 @@ nav {
     }
   }
 }
-
-.nav-show{
+.nav-show {
   opacity: 1;
 }
-
-
 .nav-big-mob {
+  
   position: fixed;
   z-index: 600;
+
   top: 0px;
   bottom: 0;
   width: 100%;
   @include grid(100%, 68px 30px auto 45px 50px);
+  display: none;
   background-color: $color-dark;
   .container-logo {
     justify-self: center;
@@ -241,7 +217,6 @@ nav {
       }
     }
   }
-
   .container-social {
     justify-self: center;
     align-self: center;
@@ -252,19 +227,16 @@ nav {
       @include img("117", "icon_facebook_ver1.svg", 28px, 28px, 28px, auto);
       cursor: pointer;
     }
-
     .twiter {
       margin-right: 15px;
       @include img("117", "icon_twitter_ver1.svg", 28px, 28px, 28px, auto);
       cursor: pointer;
     }
-
     .google {
       @include img("117", "icon_google+_ver1.svg", 43px, 28px, 43px, 28px);
       cursor: pointer;
     }
   }
-
   .container-close {
     justify-self: center;
     align-self: center;
@@ -276,22 +248,20 @@ nav {
 // Paga cover
 .header {
   @include grid(100%, auto 100px);
-
   margin: 0;
   padding: 0;
   height: 100vh;
-
   background-color: $color-dark;
-
   .main {
-    @include grid(minmax(10px, auto) minmax(200px, 80%) minmax(10px, auto), auto);
-    @include background-img("117", "header_background_ver1.jpg", auto, auto);
-
+    @include grid(
+      minmax(10px, auto) minmax(200px, 80%) minmax(10px, auto),
+      auto
+    );
+    @include background-img("117", "header_background_ver2.jpg", auto, auto);
     .header {
       @include grid-wraper(2, 3, auto, auto);
       @include grid(130px auto, 100%);
-      background: rgba(76, 175, 80, 0.01);  
-
+      background: rgba(76, 175, 80, 0.01);
       height: 80px;
       .logo {
         @include grid(30px auto, 100%);
@@ -301,7 +271,6 @@ nav {
           background-position: center bottom;
           height: 68px;
         }
-
         > .title {
           @include grid-element(left, start);
           margin-top: 49px;
@@ -309,7 +278,6 @@ nav {
           @include font(19px, $color-spot, 400, 4px, 0);
         }
       }
-
       .nav {
         @include grid-element(right, end);
         padding-bottom: 20px;
@@ -321,7 +289,6 @@ nav {
         }
       }
     }
-
     .content {
       @include grid-wraper(2, 3, auto, auto);
       .title {
@@ -332,14 +299,15 @@ nav {
             @include font(40px, $color-spot, 500, 4px, 0);
           }
         }
+        .title-mob{
+          display: none;
+        }
       }
-
       .phrase {
         text-align: center;
         margin-top: 40px;
         @include font(18px, $color-white, 300, 1px, 0);
       }
-
       .buttons {
         text-align: center;
         margin-top: 50px;
@@ -355,74 +323,130 @@ nav {
       }
     }
   }
-
   .footer {
     @include grid(60px auto 60px, 100%);
     background-color: white;
     .button-left {
       @include grid(100%, 100%);
-
       .icon {
         @include grid-element(center, center);
         @include img("117", "left_pointer_ver1.svg", 15px, 20px, 15px, 20px);
       }
     }
-
     .list-company {
       display: flex;
       flex-wrap: nowrap;
       overflow-x: hidden;
-
       div {
         margin: 0 30px;
         flex: 0 0 auto;
       }
-
       .comData {
-        margin-left: 0px;
-        @include img("Company", "comData_logo_ver1.png", 51px, 100px, 168px, auto);
+        @include img(
+          "Company",
+          "comData_logo_ver1.png",
+          51px,
+          100px,
+          168px,
+          auto
+        );
       }
-
       .execom {
-        @include img("Company", "execom_logo_ver1.png", 130px, 100px, 130px, auto);
+        @include img(
+          "Company",
+          "execom_logo_ver1.png",
+          130px,
+          100px,
+          130px,
+          auto
+        );
       }
-
       .exlrt {
-        @include img("Company", "exlrt_logo_ver1.png", 140px, 100px, 140px, auto);
+        @include img(
+          "Company",
+          "exlrt_logo_ver1.png",
+          140px,
+          100px,
+          140px,
+          auto
+        );
       }
-
       .itEngine {
-        @include img("Company", "itEngine_logo_ver1.png", 136px, 100px, 136px, auto);
+        @include img(
+          "Company",
+          "itEngine_logo_ver1.png",
+          136px,
+          100px,
+          136px,
+          auto
+        );
       }
-
       .leviNine {
-        @include img("Company", "leviNine_logo_ver1.png", 100px, 100px, 125px, auto);
+        @include img(
+          "Company",
+          "leviNine_logo_ver1.png",
+          100px,
+          100px,
+          125px,
+          auto
+        );
       }
-
       .libraFire {
-        @include img("Company", "libraFire_logo_ver1.png", 144px, 100px, 144px, auto);
+        @include img(
+          "Company",
+          "libraFire_logo_ver1.png",
+          144px,
+          100px,
+          144px,
+          auto
+        );
       }
-
       .mi {
         @include img("Company", "mi_logo_ver1.png", 116px, 100px, 116px, auto);
       }
-
       .naovis {
-        @include img("Company", "naovis_logo_ver1.png", 138px, 100px, 138px, auto);
+        @include img(
+          "Company",
+          "naovis_logo_ver1.png",
+          138px,
+          100px,
+          138px,
+          auto
+        );
       }
-
       .synechron {
-        @include img("Company", "synechron_logo_ver1.png", 142px, 100px, 142px, auto);
+        @include img(
+          "Company",
+          "synechron_logo_ver1.png",
+          142px,
+          100px,
+          142px,
+          auto
+        );
       }
-
+      .intens {
+        @include img(
+          "Company",
+          "intens_logo_ver1.png",
+          142px,
+          100px,
+          142px,
+          auto
+        );
+      }
       .vivify {
-        @include img("Company", "vivify_logo_ver1.png", 164px, 100px, 164px, auto);
+        @include img(
+          "Company",
+          "vivify_logo_ver1.png",
+          164px,
+          100px,
+          164px,
+          auto
+        );
       }
     }
-
     .button-right {
       @include grid(100%, 100%);
-
       .icon {
         @include grid-element(center, center);
         @include img("117", "right_pointer_ver1.svg", 15px, 20px, 15px, 20px);
@@ -430,19 +454,18 @@ nav {
     }
   }
 }
-
 // Course - Training Program
 .course {
   @include grid(100%, 100%);
   background-color: $color-white;
-
   .main {
-    @include grid(minmax(60px, auto) minmax(200px, 1000px) minmax(60px, auto), auto);
-
+    @include grid(
+      minmax(60px, auto) minmax(200px, 1000px) minmax(60px, auto),
+      auto
+    );
     .introduction {
       @include grid-wraper(2, 3, auto, auto);
       padding: 40px 0px 10px 0px;
-
       .ornament {
         hr {
           border: 0;
@@ -452,26 +475,21 @@ nav {
           border-radius: 4px;
         }
       }
-
       .title {
         text-align: center;
         margin-top: 20px;
         @include font(30px, $color-dark, 500, 4px, normal);
       }
-
       .text {
         margin-top: 20px;
         text-align: center;
         @include font(15px, $color-text, 300, 1px, 1.7);
       }
     }
-
     .infographic {
       @include grid-wraper(2, 3, auto, auto);
-
       .section-basic {
         @include grid(calc(100% / 2 - 80px) 160px calc(100% / 2 - 80px), auto);
-
         > .left {
           padding: 0px;
           align-self: center;
@@ -479,7 +497,6 @@ nav {
           .short {
             @include font(17px, $color-dark, 500, 1px, normal);
           }
-
           .long {
             text-align: left;
             .title {
@@ -490,7 +507,6 @@ nav {
               @include font(14px, $color-text, 300, 1px, normal);
             }
           }
-
           .important {
             padding: 10px;
             background-color: $color-spot;
@@ -505,12 +521,10 @@ nav {
             }
           }
         }
-
         .center {
           position: relative;
           @include grid(50%, auto);
           min-height: 170px;
-
           .left {
             @include grid(100%, 50%);
             justify-self: end;
@@ -522,15 +536,20 @@ nav {
               background-repeat: repeat-y;
             }
           }
-
           .icon {
             position: absolute;
             left: calc(50% - 52px);
             top: calc(50% - 50px);
-            @include img("117", "icon_start_ver1.svg", 100px, 100px, 100px, auto);
+            @include img(
+              "117",
+              "icon_start_ver1.svg",
+              100px,
+              100px,
+              100px,
+              auto
+            );
           }
         }
-
         .right {
           padding: 0px;
           align-self: center;
@@ -539,7 +558,6 @@ nav {
             text-align: left;
             @include font(17px, $color-dark, 500, 1px, normal);
           }
-
           .long {
             text-align: left;
             .title {
@@ -565,38 +583,32 @@ nav {
           }
         }
       }
-
       .after-horizontal {
         margin-top: -11px;
       }
-
       .section-horizontal {
         position: relative;
         height: 450px;
         width: 100%;
         @include grid(50% 50%, calc(50% - 45px) calc(50% - 45px) 90px);
-
         .container-information {
           @include grid-wraper(1, 3, 1, 1);
           position: absolute;
           z-index: 5;
           justify-self: center;
           text-align: center;
-
           .informations {
             text-align: center;
             .title {
               margin-top: 65px;
               @include font(17px, $color-dark, 500, 1px, normal);
             }
-
             .text {
               margin-top: 15px;
               @include font(14px, $color-text, 300, 1px, normal);
             }
           }
         }
-
         .container-icons {
           @include grid-wraper(1, 3, 1, 3);
           position: absolute;
@@ -606,35 +618,58 @@ nav {
           @include grid(100%, 100%);
           .icons {
             position: relative;
-
             .icon-1 {
               position: absolute;
               left: -50px;
               top: calc(50% - 60px);
-              @include img("117", "icon_start_ver1.svg", 100px, 100px, 100px, auto);
+              @include img(
+                "117",
+                "icon_start_ver1.svg",
+                100px,
+                100px,
+                100px,
+                auto
+              );
             }
-
             .icon-2 {
               position: absolute;
               left: calc(50% - 52px);
               top: calc(50% - 60px);
-              @include img("117", "icon_start_ver1.svg", 100px, 100px, 100px, auto);
+              @include img(
+                "117",
+                "icon_start_ver1.svg",
+                100px,
+                100px,
+                100px,
+                auto
+              );
             }
-
             .icon-3 {
               position: absolute;
               right: -50px;
               top: calc(50% - 60px);
-              @include img("117", "icon_start_ver1.svg", 100px, 100px, 100px, auto);
+              @include img(
+                "117",
+                "icon_start_ver1.svg",
+                100px,
+                100px,
+                100px,
+                auto
+              );
             }
-
             .icon-4 {
               position: absolute;
               left: calc(50% - 52px);
               bottom: -40px;
-              @include img("117", "icon_start_ver1.svg", 100px, 100px, 100px, auto);
+              @include img(
+                "117",
+                "icon_start_ver1.svg",
+                100px,
+                100px,
+                100px,
+                auto
+              );
             }
-
             .dot-ornament-1 {
               position: absolute;
               left: -3px;
@@ -655,7 +690,6 @@ nav {
             }
           }
         }
-
         .left-top {
           @include grid(100%, 10px auto 10px);
           .dot-top {
@@ -667,7 +701,6 @@ nav {
               background-repeat: repeat-x;
             }
           }
-
           .dot-left {
             display: grid;
             justify-self: start;
@@ -679,7 +712,6 @@ nav {
               background-repeat: repeat-y;
             }
           }
-
           .dot-bottom {
             .dot {
               max-width: 100%;
@@ -690,7 +722,6 @@ nav {
             }
           }
         }
-
         .right-top {
           align-self: end;
           .dot-bottom {
@@ -703,19 +734,17 @@ nav {
             }
           }
         }
-
         .left-bottom {
         }
-
         .right-bottom {
           @include grid(100%, auto 10px);
-
           .dot-right {
             display: grid;
             justify-self: end;
             .dot {
               width: 4px;
               max-height: fit-content;
+
               background: url("/img/117/dot_ver1.svg") no-repeat center;
               background-size: 6px 6px;
               background-repeat: repeat-y;
@@ -731,10 +760,8 @@ nav {
             }
           }
         }
-
         .bottom-bottom {
           @include grid(100%, auto 10px);
-
           .dot-right {
             display: grid;
             justify-self: end;
@@ -749,12 +776,10 @@ nav {
         }
       }
     }
-
     .infographic-end {
       @include grid-wraper(1, 4, none, none);
       @include grid(100%, 100%);
       background-color: $color-dark;
-
       .container {
         @include grid(
           minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto),
@@ -762,12 +787,13 @@ nav {
         );
         align-self: start;
         padding-bottom: 25px;
-
         .section-basic {
           @include grid-wraper(2, 3, none, none);
-          @include grid(calc(100% / 2 - 80px) 160px calc(100% / 2 - 80px), auto);
+          @include grid(
+            calc(100% / 2 - 80px) 160px calc(100% / 2 - 80px),
+            auto
+          );
           margin-bottom: 1px;
-
           > .left {
             padding: 70px 0px 70px 0px;
             align-self: center;
@@ -775,7 +801,6 @@ nav {
             .short {
               @include font(17px, $color-dark, 500, 1px, normal);
             }
-
             .long {
               text-align: left;
               .title {
@@ -786,7 +811,6 @@ nav {
                 @include font(14px, $color-text, 300, 1px, normal);
               }
             }
-
             .important {
               padding: 10px;
               background-color: $color-spot;
@@ -801,12 +825,10 @@ nav {
               }
             }
           }
-
           .center {
             position: relative;
             @include grid(50%, auto);
             height: 180px;
-
             .left {
               @include grid(100%, 50%);
               justify-self: end;
@@ -818,12 +840,18 @@ nav {
                 background-repeat: repeat-y;
               }
             }
-
             .icon {
               position: absolute;
               left: calc(50% - 52px);
               top: calc(50% - 50px);
-              @include img("117", "icon_start_ver1.svg", 100px, 100px, 100px, auto);
+              @include img(
+                "117",
+                "icon_start_ver1.svg",
+                100px,
+                100px,
+                100px,
+                auto
+              );
             }
           }
           .finish {
@@ -844,7 +872,6 @@ nav {
     }
   }
 }
-
 .course-mob {
   padding: 40px 15px 0px 15px;
   background-color: $color-white;
@@ -858,13 +885,11 @@ nav {
         border-radius: 4px;
       }
     }
-
     .title {
       text-align: center;
       margin-top: 20px;
       @include font(30px, $color-dark, 500, 4px, normal);
     }
-
     .text {
       margin-top: 20px;
       @include font(15px, $color-text, 300, 1px, 1.7);
@@ -916,7 +941,6 @@ nav {
       .container-text {
         padding: 60px 10px;
         text-align: center;
-
         .title {
           @include font(17px, $color-dark, 500, 1px, normal);
         }
@@ -964,7 +988,6 @@ nav {
           }
         }
       }
-
       .container-finish {
         margin-top: 70px;
         background-color: $color-dark;
@@ -978,7 +1001,6 @@ nav {
           height: 70px !important;
           background-size: 70px !important;
         }
-
         .title {
           margin-top: 15px;
           @include font(17px, $color-white, 500, 1px, normal);
@@ -993,10 +1015,12 @@ nav {
     }
   }
 }
-
 // Course - Material
 .material {
-  @include grid(minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto), auto);
+  @include grid(
+    minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto),
+    auto
+  );
   background-color: $color-white;
   .main {
     @include grid-wraper(2, 3, auto, auto);
@@ -1005,29 +1029,29 @@ nav {
       text-align: center;
       @include font(25px, $color-dark, 500, 1px, normal);
     }
-
     .text {
       margin-top: 20px;
       text-align: justify;
       text-align-last: center;
       @include font(15px, $color-text, 300, 1px, 1.5);
     }
-
     .button {
       margin-top: 20px;
       text-align: center;
       button {
         @include button(40px, 130px, $color-spot, 1px, $color-spot, 10px);
         @include font(13px, $color-white, 300, 1px, normal);
+        cursor: pointer;
       }
     }
   }
 }
-
-// Course - Price
-.price {
+.registration {
+  @include grid(
+    minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto),
+    auto
+  );
   background-color: $color-white;
-  @include grid(minmax(15px, auto) minmax(200px, 1000px) minmax(15px, auto), auto);
   border-top: 1px solid #dadada;
   .main {
     @include grid-wraper(2, 3, auto, auto);
@@ -1036,7 +1060,38 @@ nav {
       text-align: center;
       @include font(25px, $color-dark, 500, 1px, normal);
     }
-
+    .text {
+      margin-top: 20px;
+      text-align: justify;
+      text-align-last: center;
+      @include font(15px, $color-text, 300, 1px, 1.5);
+    }
+    .button {
+      margin-top: 20px;
+      text-align: center;
+      button {
+        @include button(40px, 130px, $color-spot, 1px, $color-spot, 10px);
+        @include font(13px, $color-white, 300, 1px, normal);
+        cursor: pointer;
+      }
+    }
+  }
+}
+// Course - Price
+.price {
+  background-color: $color-white;
+  @include grid(
+    minmax(15px, auto) minmax(200px, 1000px) minmax(15px, auto),
+    auto
+  );
+  border-top: 1px solid #dadada;
+  .main {
+    @include grid-wraper(2, 3, auto, auto);
+    padding: 40px 0px 40px 0px;
+    .title {
+      text-align: center;
+      @include font(25px, $color-dark, 500, 1px, normal);
+    }
     .text {
       margin-top: 20px;
       text-align: justify;
@@ -1045,11 +1100,12 @@ nav {
     }
   }
 }
-
 .company {
   background-color: $color-dark;
-  @include grid(minmax(15px, auto) minmax(200px, 1000px) minmax(15px, auto), auto);
-
+  @include grid(
+    minmax(15px, auto) minmax(200px, 1000px) minmax(15px, auto),
+    auto
+  );
   .main {
     @include grid-wraper(2, 3, auto, auto);
     padding: 40px 0px 40px 0px;
@@ -1057,7 +1113,6 @@ nav {
       text-align: center;
       @include font(25px, $color-white, 400, 1px, normal);
     }
-
     .text {
       margin-top: 20px;
       text-align: center;
@@ -1083,10 +1138,12 @@ nav {
     }
   }
 }
-
 // Faq
 .faq {
-  @include grid(minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto), auto);
+  @include grid(
+    minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto),
+    auto
+  );
   background-color: $color-white;
   border-top: 1px solid #dadada;
   .main {
@@ -1097,7 +1154,6 @@ nav {
       @include font(25px, $color-dark, 500, 1px, normal);
       margin-bottom: 15px;
     }
-
     .container-question {
       .question {
         padding: 15px 15px 15px 3px;
@@ -1108,7 +1164,6 @@ nav {
           align-self: center;
           @include font(15px, $color-dark, 500, 1px, 1.5);
         }
-
         .button {
           align-self: center;
           justify-self: end;
@@ -1119,7 +1174,6 @@ nav {
           @include img("117", "icon_plus_h_ver1.svg", 25px, 25px, 25px, auto);
         }
       }
-
       .answer {
         padding: 5px;
         .text {
@@ -1133,11 +1187,13 @@ nav {
     }
   }
 }
-
 // Gallery
 .gallery {
   background-color: $color-white;
-  @include grid(minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto), auto);
+  @include grid(
+    minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto),
+    auto
+  );
   border-top: 1px solid #dadada;
   .main {
     @include grid-wraper(2, 3, auto, auto);
@@ -1156,7 +1212,8 @@ nav {
           auto
         );
         grid-column-gap: 20px;
-        grid-row-gap: 20px;
+        grid-row-gap: 20px; // 117
+        position: relative;
         .frame {
           background-color: $color-dark;
           overflow: hidden;
@@ -1165,12 +1222,36 @@ nav {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            opacity: 0.5;
+            opacity: 0.7;
             transition: transform 400ms ease-out;
           }
           img:hover {
             transform: scale(1.15);
-            cursor: pointer;
+            cursor: zoom-in;
+          }
+        }
+        .frame-x {
+          // 117
+          position: absolute !important;
+          z-index: 2 !important;
+          width: 100% !important;
+          height: 100% !important;
+          img {
+            height: 100% !important;
+            
+            //width: auto !important;
+            margin: auto;
+            opacity: 0.8;
+        
+          }
+          img:hover {
+            transform: scale(1) !important;
+            cursor: zoom-out !important;
+          }
+        }
+        .frame-x-v{
+          img{
+            width: auto !important;
           }
         }
       }
@@ -1179,12 +1260,14 @@ nav {
         margin-top: 19px;
         .left {
           @include img("117", "leftline_ver1.svg", 35px, 25px, 35px, 25px);
+
           margin-right: 18px;
           cursor: pointer;
         }
         .left:hover {
           @include img("117", "leftline_h_ver1.svg", 35px, 25px, 35px, 25px);
         }
+
         .right {
           @include img("117", "rightline_ver1.svg", 35px, 25px, 35px, 25px);
           margin-right: 5px;
@@ -1199,7 +1282,10 @@ nav {
 }
 .gallery-mob {
   background-color: $color-white;
-  @include grid(minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto), auto);
+  @include grid(
+    minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto),
+    auto
+  );
   border-top: 1px solid #dadada;
   .main {
     @include grid-wraper(2, 3, auto, auto);
@@ -1210,21 +1296,17 @@ nav {
       margin-bottom: 15px;
     }
     .frame-img {
-      margin-top: 20px;
-      //margin-left: -20px;
-      //margin-left: -20px;
-      //width: calc(100% + 40px);
+      margin-top: 20px; // margin-left: -20px; // margin-left: -20px; // width: calc(100% + 40px);
       overflow-x: scroll;
       overflow-y: hidden;
       height: 41vh;
       display: flex;
       background-color: $color-dark;
-
       .img {
         float: left;
         height: 100%;
         img {
-          opacity: 0.4;
+          opacity: 1;
           height: 100%;
         }
       }
@@ -1246,11 +1328,13 @@ nav {
   }
 }
 
-
 // Experiences
 .experiences {
   background-color: $color-white;
-  @include grid(minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto), auto);
+  @include grid(
+    minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto),
+    auto
+  );
   border-top: 1px solid #dadada;
   .main {
     @include grid-wraper(2, 3, auto, auto);
@@ -1269,21 +1353,17 @@ nav {
         text-align: center;
         @include font(25px, $color-dark, 500, 1px, normal);
       }
-
       .text {
         margin-top: 20px;
         text-align: center;
         @include font(15px, $color-text, 300, 1px, 1.5);
       }
-
       .student-name {
         margin-top: 15px;
         text-align: center;
         @include font(15px, $color-dark, 400, 1px, 1.5);
         font-style: italic;
       }
-
-      
     }
     .right {
       justify-self: center;
@@ -1314,23 +1394,674 @@ nav {
     }
   }
 }
-
 // Contact
+
+.contact-with-form{
+
+  // .contact {
+  //   @include grid(100%, auto);
+  //   background-color: $color-dark;
+  //   .par {
+  //     @include grid(
+  //       minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto),
+  //       auto
+  //     );
+  //     border-top: 1px solid #dadada;
+  //     .main {
+  //       @include grid-wraper(2, 3, auto, auto);
+  //       padding: 40px 0px 40px 0px;
+  //       .title {
+  //         text-align: center;
+  //         margin-top: 12px;
+  //         @include font(25px, $color-white, 500, 2px, normal);
+  //       }
+  //       .text {
+  //         margin-top: 20px;
+  //         text-align: center;
+  //         @include font(15px, $color-white, 300, 1px, 1.5);
+  //       }
+  //     }
+  //   }
+  //   .container-big {
+  //     padding-top: 10px;
+  //     @include grid(
+  //       minmax(10px, auto) minmax(200px, 1400px) minmax(10px, auto),
+  //       auto
+  //     );
+  //     .information-form {
+  //       @include grid-wraper(2, 3, auto, auto);
+  //       @include grid(calc(100% / 3) calc(100% / 3) calc(100% / 3), 100%);
+  //       .information {
+  //         @include grid(
+  //           minmax(10px, auto) minmax(250px, 350px) minmax(10px, auto),
+  //           auto
+  //         );
+  //         .container {
+  //           @include grid-wraper(2, 3, auto, auto);
+  //           .logo {
+  //             @include grid(25px calc(100% - 25px), 100%);
+  //             .img {
+  //               @include grid-element(left, start);
+  //               @include img(
+  //                 "117",
+  //                 "aleph_logo_ver1.svg",
+  //                 21px,
+  //                 25px,
+  //                 21px,
+  //                 25px
+  //               );
+  //             }
+  //             .text {
+  //               padding-left: 3px;
+  //               @include grid-element(start, center);
+  //               @include font(18px, $color-spot, 400, 3px, normal);
+  //             }
+  //           }
+  //           .mail {
+  //             margin-top: 15px;
+  //             @include font(15px, $color-white, 300, 1px, normal);
+  //             .title {
+  //               margin-bottom: 3px;
+  //             }
+  //             .text {
+  //               @include font(15px, $color-white, 300, 1px, normal);
+  //             }
+  //           }
+  //           .address {
+  //             margin-top: 15px;
+  //             @include font(15px, $color-white, 300, 1px, normal);
+  //             .title {
+  //               margin-bottom: 3px;
+  //             }
+  //             .text {
+  //             }
+  //           }
+  //           .social {
+  //             margin-top: 20px;
+  //             .facebook {
+  //               margin-right: 15px;
+  //               @include img(
+  //                 "117",
+  //                 "icon_facebook_ver1.svg",
+  //                 28px,
+  //                 28px,
+  //                 28px,
+  //                 auto
+  //               );
+  //               cursor: pointer;
+  //             }
+  //             .twiter {
+  //               margin-right: 15px;
+  //               @include img(
+  //                 "117",
+  //                 "icon_twitter_ver1.svg",
+  //                 28px,
+  //                 28px,
+  //                 28px,
+  //                 auto
+  //               );
+  //               cursor: pointer;
+  //             }
+  //             .google {
+  //               @include img(
+  //                 "117",
+  //                 "icon_google+_ver1.svg",
+  //                 43px,
+  //                 28px,
+  //                 43px,
+  //                 28px
+  //               );
+  //               cursor: pointer;
+  //             }
+  //           }
+  //         }
+  //       }
+  //       .forms-1 {
+  //         @include grid(
+  //           minmax(10px, auto) minmax(250px, 350px) minmax(10px, auto),
+  //           auto
+  //         );
+  //         .form {
+  //           @include grid-wraper(2, 3, auto, auto);
+  //           margin-bottom: 40px;
+  //           text-align: center;
+  //           .container {
+  //             // width: 100%;
+  //             // margin: 0px auto;
+  //             position: relative;
+  //             .title {
+  //               position: absolute;
+  //               left: -2px;
+  //               top: -11px;
+  //               padding-right: 9px;
+  //               padding-bottom: 1px;
+  //               background-color: $color-dark;
+  //               @include font(13px, $color-white, 300, 1px, 1.5);
+  //             }
+  //             input {
+  //               height: 42px;
+  //               width: calc(100% - 32px);
+  //               border: 1px solid $color-white;
+  //               background-color: $color-dark;
+  //               padding: 0px 14px;
+  //               @include font(14px, $color-white, 300, 1px, 1.5);
+  //             }
+  //           }
+  //         }
+  //       }
+  //       .forms-2 {
+  //         @include grid(
+  //           minmax(10px, auto) minmax(250px, 350px) minmax(10px, auto),
+  //           auto
+  //         );
+  //         .form {
+  //           @include grid-wraper(2, 3, auto, auto);
+  //           text-align: center;
+  //           .container {
+  //             // width: 90%;
+  //             // margin: 0px auto;
+  //             position: relative;
+  //             .title {
+  //               position: absolute;
+  //               left: -2px;
+  //               top: -11px;
+  //               padding-right: 9px;
+  //               padding-bottom: 1px;
+  //               background-color: $color-dark;
+  //               @include font(13px, $color-white, 300, 1px, 1.5);
+  //             }
+  //             textarea {
+  //               height: 116px;
+  //               width: calc(100% - 32px);
+  //               border: 1px solid $color-white;
+  //               background-color: $color-dark;
+  //               padding: 10px 14px;
+  //               @include font(14px, $color-white, 300, 1px, 1.5);
+  //               resize: none;
+  //             }
+  //           }
+  //         }
+  //         .button {
+  //           @include grid-wraper(2, 3, auto, auto);
+  //           margin-top: -5px;
+  //           text-align: center;
+  //           button {
+  //             @include button(40px, 130px, $color-spot, 1px, $color-spot, 10px);
+  //             @include font(13px, $color-white, 300, 1px, normal);
+  //           }
+  //         }
+  //       }
+  //     }
+  //     .copyright {
+  //       @include grid-wraper(2, 3, auto, auto);
+  //       .text {
+  //         border-top: 1px solid $color-white;
+  //         padding-top: 10px;
+  //         padding-bottom: 10px;
+  //         text-align: right;
+  //         @include font(14px, $color-white, 300, 1px, normal);
+  //       }
+  //     }
+  //   }
+  // }
+  // .contact-tablet {
+  //   @include grid(100%, auto);
+  //   background-color: $color-dark;
+  //   .par {
+  //     @include grid(
+  //       minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto),
+  //       auto
+  //     );
+  //     border-top: 1px solid #dadada;
+  //     .main {
+  //       @include grid-wraper(2, 3, auto, auto);
+  //       padding: 40px 0px 0px 0px;
+  //       margin-bottom: 25px;
+  //       .title {
+  //         text-align: center;
+  //         margin-top: 12px;
+  //         @include font(25px, $color-white, 500, 2px, normal);
+  //       }
+  //       .text {
+  //         margin-top: 20px;
+  //         text-align: center;
+  //         @include font(15px, $color-white, 300, 1px, 1.5);
+  //       }
+  //     }
+  //   }
+  //   .container-big {
+  //     padding-top: 10px;
+  //     @include grid(
+  //       minmax(10px, auto) minmax(200px, 1400px) minmax(10px, auto),
+  //       auto
+  //     );
+  //     .information-form {
+  //       @include grid-wraper(2, 3, auto, auto);
+  //       @include grid(calc(100% / 2) calc(100% / 2), auto);
+  //       .information {
+  //         border-top: 1px solid $color-white;
+  //         @include grid-wraper(1, 3, auto, auto);
+  //         @include grid(
+  //           minmax(10px, auto) minmax(250px, calc(100% - 30px)) minmax(10px, auto),
+  //           auto
+  //         );
+  //         .container {
+  //           margin-top: 20px;
+  //           @include grid-wraper(2, 3, auto, auto);
+  //           text-align: center;
+  //           .logo {
+  //             display: inline-block;
+  //             .img {
+  //               margin-left: -73px;
+  //               @include img(
+  //                 "117",
+  //                 "aleph_logo_ver1.svg",
+  //                 21px,
+  //                 25px,
+  //                 21px,
+  //                 25px
+  //               );
+  //             }
+  //             .text {
+  //               position: relative;
+  //               display: inline-block;
+  //               padding-left: 3px;
+  //               @include grid-element(start, center);
+  //               @include font(18px, $color-spot, 400, 3px, normal);
+  //               span {
+  //                 position: absolute;
+  //                 top: -20px;
+  //                 left: 6px;
+  //               }
+  //             }
+  //           }
+  //           .mail {
+  //             margin-top: 15px;
+  //             @include font(15px, $color-white, 300, 1px, normal);
+  //             .title {
+  //               margin-bottom: 3px;
+  //             }
+  //             .text {
+  //               @include font(15px, $color-white, 300, 1px, normal);
+  //             }
+  //           }
+  //           .address {
+  //             margin-top: 15px;
+  //             @include font(15px, $color-white, 300, 1px, normal);
+  //             .title {
+  //               margin-bottom: 3px;
+  //             }
+  //             .text {
+  //             }
+  //           }
+  //           .social {
+  //             margin-top: 20px;
+  //             margin-bottom: 20px;
+  //             .facebook {
+  //               margin-right: 15px;
+  //               @include img(
+  //                 "117",
+  //                 "icon_facebook_ver1.svg",
+  //                 28px,
+  //                 28px,
+  //                 28px,
+  //                 auto
+  //               );
+  //               cursor: pointer;
+  //             }
+  //             .twiter {
+  //               margin-right: 15px;
+  //               @include img(
+  //                 "117",
+  //                 "icon_twitter_ver1.svg",
+  //                 28px,
+  //                 28px,
+  //                 28px,
+  //                 auto
+  //               );
+  //               cursor: pointer;
+  //             }
+  //             .google {
+  //               @include img(
+  //                 "117",
+  //                 "icon_google+_ver1.svg",
+  //                 43px,
+  //                 28px,
+  //                 43px,
+  //                 28px
+  //               );
+  //               cursor: pointer;
+  //             }
+  //           }
+  //         }
+  //       }
+  //       .forms-1 {
+  //         @include grid(
+  //           minmax(10px, auto) minmax(250px, 300px) minmax(10px, auto),
+  //           auto
+  //         );
+  //         .form {
+  //           @include grid-wraper(2, 3, auto, auto);
+  //           margin-bottom: 40px;
+  //           text-align: center;
+  //           .container {
+  //             // width: 100%;
+  //             // margin: 0px auto;
+  //             position: relative;
+  //             .title {
+  //               position: absolute;
+  //               left: -2px;
+  //               top: -11px;
+  //               padding-right: 9px;
+  //               padding-bottom: 1px;
+  //               background-color: $color-dark;
+  //               @include font(13px, $color-white, 300, 1px, 1.5);
+  //             }
+  //             input {
+  //               height: 42px;
+  //               width: calc(100% - 32px);
+  //               border: 1px solid $color-white;
+  //               background-color: $color-dark;
+  //               padding: 0px 14px;
+  //               @include font(14px, $color-white, 300, 1px, 1.5);
+  //             }
+  //           }
+  //         }
+  //       }
+  //       .forms-2 {
+  //         @include grid(
+  //           minmax(10px, auto) minmax(250px, 300px) minmax(10px, auto),
+  //           auto
+  //         );
+  //         .form {
+  //           @include grid-wraper(2, 3, auto, auto);
+  //           text-align: center;
+  //           .container {
+  //             // width: 90%;
+  //             // margin: 0px auto;
+  //             position: relative;
+  //             .title {
+  //               position: absolute;
+  //               left: -2px;
+  //               top: -11px;
+  //               padding-right: 9px;
+  //               padding-bottom: 1px;
+  //               background-color: $color-dark;
+  //               @include font(13px, $color-white, 300, 1px, 1.5);
+  //             }
+  //             textarea {
+  //               height: 116px;
+  //               width: calc(100% - 32px);
+  //               border: 1px solid $color-white;
+  //               background-color: $color-dark;
+  //               padding: 10px 14px;
+  //               @include font(14px, $color-white, 300, 1px, 1.5);
+  //               resize: none;
+  //             }
+  //           }
+  //         }
+  //         .button {
+  //           @include grid-wraper(2, 3, auto, auto);
+  //           margin-top: -5px;
+  //           text-align: center;
+  //           button {
+  //             @include button(40px, 130px, $color-spot, 1px, $color-spot, 10px);
+  //             @include font(13px, $color-white, 300, 1px, normal);
+  //           }
+  //         }
+  //       }
+  //     }
+  //     .copyright {
+  //       @include grid-wraper(2, 3, auto, auto);
+  //       .text {
+  //         border-top: 1px solid $color-white;
+  //         padding-top: 10px;
+  //         padding-bottom: 10px;
+  //         text-align: right;
+  //         @include font(14px, $color-white, 300, 1px, normal);
+  //       }
+  //     }
+  //   }
+  // }
+  // .contact-mob {
+  //   @include grid(100%, auto);
+  //   background-color: $color-dark;
+  //   .par {
+  //     @include grid(
+  //       minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto),
+  //       auto
+  //     );
+  //     border-top: 1px solid #dadada;
+  //     .main {
+  //       @include grid-wraper(2, 3, auto, auto);
+  //       padding: 40px 0px 0px 0px;
+  //       margin-bottom: 25px;
+  //       .title {
+  //         text-align: center;
+  //         margin-top: 12px;
+  //         @include font(25px, $color-white, 500, 2px, normal);
+  //       }
+  //       .text {
+  //         margin-top: 20px;
+  //         text-align: center;
+  //         @include font(15px, $color-white, 300, 1px, 1.5);
+  //       }
+  //     }
+  //   }
+  //   .container-big {
+  //     padding-top: 10px;
+  //     @include grid(
+  //       minmax(10px, auto) minmax(200px, 1400px) minmax(10px, auto),
+  //       auto
+  //     );
+  //     .information-form {
+  //       @include grid-wraper(2, 3, auto, auto);
+  //       @include grid(100%, auto);
+  //       .information {
+  //         @include grid(
+  //           minmax(10px, auto) minmax(250px, calc(100% - 30px)) minmax(10px, auto),
+  //           auto
+  //         );
+  //         margin-top: 30px;
+  //         padding-top: 20px;
+  //         border-top: 1px solid $color-white;
+  //         .container {
+  //           @include grid-wraper(2, 3, auto, auto);
+  //           text-align: center;
+  //           .logo {
+  //             display: inline-block;
+  //             .img {
+  //               margin-left: -73px;
+  //               @include img(
+  //                 "117",
+  //                 "aleph_logo_ver1.svg",
+  //                 21px,
+  //                 25px,
+  //                 21px,
+  //                 25px
+  //               );
+  //             }
+  //             .text {
+  //               position: relative;
+  //               display: inline-block;
+  //               padding-left: 3px;
+  //               @include grid-element(start, center);
+  //               @include font(18px, $color-spot, 400, 3px, normal);
+  //               span {
+  //                 position: absolute;
+  //                 top: -20px;
+  //                 left: 6px;
+  //               }
+  //             }
+  //           }
+  //           .mail {
+  //             margin-top: 15px;
+  //             @include font(15px, $color-white, 300, 1px, normal);
+  //             .title {
+  //               margin-bottom: 3px;
+  //             }
+  //             .text {
+  //               @include font(15px, $color-white, 300, 1px, normal);
+  //             }
+  //           }
+  //           .address {
+  //             margin-top: 15px;
+  //             @include font(15px, $color-white, 300, 1px, normal);
+  //             .title {
+  //               margin-bottom: 3px;
+  //             }
+  //             .text {
+  //             }
+  //           }
+  //           .social {
+  //             margin-top: 20px;
+  //             margin-bottom: 20px;
+  //             margin-left: 7px;
+  //             .facebook {
+  //               margin-right: 15px;
+  //               @include img(
+  //                 "117",
+  //                 "icon_facebook_ver1.svg",
+  //                 28px,
+  //                 28px,
+  //                 28px,
+  //                 auto
+  //               );
+  //               cursor: pointer;
+  //             }
+  //             .twiter {
+  //               margin-right: 15px;
+  //               @include img(
+  //                 "117",
+  //                 "icon_twitter_ver1.svg",
+  //                 28px,
+  //                 28px,
+  //                 28px,
+  //                 auto
+  //               );
+  //               cursor: pointer;
+  //             }
+  //             .google {
+  //               @include img(
+  //                 "117",
+  //                 "icon_google+_ver1.svg",
+  //                 43px,
+  //                 28px,
+  //                 43px,
+  //                 28px
+  //               );
+  //               cursor: pointer;
+  //             }
+  //           }
+  //         }
+  //       }
+  //       .forms-1 {
+  //         @include grid(
+  //           minmax(10px, auto) minmax(250px, 300px) minmax(10px, auto),
+  //           auto
+  //         );
+  //         .form {
+  //           @include grid-wraper(2, 3, auto, auto);
+  //           margin-bottom: 40px;
+  //           text-align: center;
+  //           .container {
+  //             // width: 100%;
+  //             // margin: 0px auto;
+  //             position: relative;
+  //             .title {
+  //               position: absolute;
+  //               left: -2px;
+  //               top: -11px;
+  //               padding-right: 9px;
+  //               padding-bottom: 1px;
+  //               background-color: $color-dark;
+  //               @include font(13px, $color-white, 300, 1px, 1.5);
+  //             }
+  //             input {
+  //               height: 42px;
+  //               width: calc(100% - 32px);
+  //               border: 1px solid $color-white;
+  //               background-color: $color-dark;
+  //               padding: 0px 14px;
+  //               @include font(14px, $color-white, 300, 1px, 1.5);
+  //             }
+  //           }
+  //         }
+  //       }
+  //       .forms-2 {
+  //         @include grid(
+  //           minmax(10px, auto) minmax(250px, 300px) minmax(10px, auto),
+  //           auto
+  //         );
+  //         .form {
+  //           @include grid-wraper(2, 3, auto, auto);
+  //           text-align: center;
+  //           .container {
+  //             // width: 90%;
+  //             // margin: 0px auto;
+  //             position: relative;
+  //             .title {
+  //               position: absolute;
+  //               left: -2px;
+  //               top: -11px;
+  //               padding-right: 9px;
+  //               padding-bottom: 1px;
+  //               background-color: $color-dark;
+  //               @include font(13px, $color-white, 300, 1px, 1.5);
+  //             }
+  //             textarea {
+  //               height: 116px;
+  //               width: calc(100% - 32px);
+  //               border: 1px solid $color-white;
+  //               background-color: $color-dark;
+  //               padding: 10px 14px;
+  //               @include font(14px, $color-white, 300, 1px, 1.5);
+  //               resize: none;
+  //             }
+  //           }
+  //         }
+  //         .button {
+  //           @include grid-wraper(2, 3, auto, auto);
+  //           text-align: center;
+  //           button {
+  //             margin-top: 25px;
+  //             @include button(40px, 130px, $color-spot, 1px, $color-spot, 10px);
+  //             @include font(13px, $color-white, 300, 1px, normal);
+  //           }
+  //         }
+  //       }
+  //     }
+  //     .copyright {
+  //       @include grid-wraper(2, 3, auto, auto);
+  //       .text {
+  //         border-top: 1px solid $color-white;
+  //         padding-top: 10px;
+  //         padding-bottom: 10px;
+  //         text-align: right;
+  //         @include font(14px, $color-white, 300, 1px, normal);
+  //       }
+  //     }
+  //   }
+  // }
+}
+
 .contact {
   @include grid(100%, auto);
   background-color: $color-dark;
   .par {
-    @include grid(minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto), auto);
+    @include grid(
+      minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto),
+      auto
+    );
     border-top: 1px solid #dadada;
     .main {
       @include grid-wraper(2, 3, auto, auto);
-      padding: 40px 0px 40px 0px;
+      padding: 40px 0px 30px 0px;
       .title {
         text-align: center;
         margin-top: 12px;
         @include font(25px, $color-white, 500, 2px, normal);
       }
-
       .text {
         margin-top: 20px;
         text-align: center;
@@ -1338,32 +2069,40 @@ nav {
       }
     }
   }
-
   .container-big {
     padding-top: 10px;
-    @include grid(minmax(10px, auto) minmax(200px, 1400px) minmax(10px, auto), auto);
+    @include grid(
+      minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto),
+      auto
+    );
     .information-form {
       @include grid-wraper(2, 3, auto, auto);
-      @include grid(calc(100% / 3) calc(100% / 3) calc(100% / 3), 100%);
+      @include grid(auto auto, 100%);
+      margin-bottom: 40px;
       .information {
-        @include grid(minmax(10px, auto) minmax(250px, 350px) minmax(10px, auto), auto);
+        @include grid( 100%, auto);
         .container {
-          @include grid-wraper(2, 3, auto, auto);
-
+          background: rgba(256, 256, 256, 0.05);
+          padding: 12px;
           .logo {
             @include grid(25px calc(100% - 25px), 100%);
             .img {
               @include grid-element(left, start);
-              @include img("117", "aleph_logo_ver1.svg", 21px, 25px, 21px, 25px);
+              @include img(
+                "117",
+                "aleph_logo_ver1.svg",
+                21px,
+                25px,
+                21px,
+                25px
+              );
             }
-
             .text {
               padding-left: 3px;
               @include grid-element(start, center);
               @include font(18px, $color-spot, 400, 3px, normal);
             }
           }
-
           .mail {
             margin-top: 15px;
             @include font(15px, $color-white, 300, 1px, normal);
@@ -1374,7 +2113,6 @@ nav {
               @include font(15px, $color-white, 300, 1px, normal);
             }
           }
-
           .address {
             margin-top: 15px;
             @include font(15px, $color-white, 300, 1px, normal);
@@ -1384,122 +2122,89 @@ nav {
             .text {
             }
           }
-
           .social {
             margin-top: 20px;
             .facebook {
               margin-right: 15px;
-              @include img("117", "icon_facebook_ver1.svg", 28px, 28px, 28px, auto);
+              @include img(
+                "117",
+                "icon_facebook_ver1.svg",
+                28px,
+                28px,
+                28px,
+                auto
+              );
               cursor: pointer;
             }
-
             .twiter {
               margin-right: 15px;
-              @include img("117", "icon_twitter_ver1.svg", 28px, 28px, 28px, auto);
+              @include img(
+                "117",
+                "icon_twitter_ver1.svg",
+                28px,
+                28px,
+                28px,
+                auto
+              );
               cursor: pointer;
             }
-
             .google {
-              @include img("117", "icon_google+_ver1.svg", 43px, 28px, 43px, 28px);
+              @include img(
+                "117",
+                "icon_google+_ver1.svg",
+                43px,
+                28px,
+                43px,
+                28px
+              );
               cursor: pointer;
             }
           }
         }
       }
-
-      .forms-1 {
-        @include grid(minmax(10px, auto) minmax(250px, 350px) minmax(10px, auto), auto);
-        .form {
-          @include grid-wraper(2, 3, auto, auto);
-          margin-bottom: 40px;
-          text-align: center;
-          .container {
-            //width: 100%;
-            //margin: 0px auto;
-            position: relative;
-            .title {
-              position: absolute;
-              left: -2px;
-              top: -11px;
-              padding-right: 9px;
-              padding-bottom: 1px;
-              background-color: $color-dark;
-              @include font(13px, $color-white, 300, 1px, 1.5);
-            }
-
-            input {
-              height: 42px;
-              width: calc(100% - 32px);
-              border: 1px solid $color-white;
-              background-color: $color-dark;
-              padding: 0px 14px;
-              @include font(14px, $color-white, 300, 1px, 1.5);
-            }
-          }
+      .container-map{
+        @include grid(100%, auto);
+        -webkit-filter: grayscale(74%) saturate(100%);
+        filter: grayscale(74%) saturate(100%);
+        
+        iframe{
+          width: 100%;
+          height: 227px;
+          opacity: 0.9;
+          
         }
       }
-
-      .forms-2 {
-        @include grid(minmax(10px, auto) minmax(250px, 350px) minmax(10px, auto), auto);
-        .form {
-          @include grid-wraper(2, 3, auto, auto);
-          text-align: center;
-          .container {
-            //width: 90%;
-            //margin: 0px auto;
-            position: relative;
-            .title {
-              position: absolute;
-              left: -2px;
-              top: -11px;
-              padding-right: 9px;
-              padding-bottom: 1px;
-              background-color: $color-dark;
-              @include font(13px, $color-white, 300, 1px, 1.5);
-            }
-
-            textarea {
-              height: 116px;
-              width: calc(100% - 32px);
-              border: 1px solid $color-white;
-              background-color: $color-dark;
-              padding: 10px 14px;
-              @include font(14px, $color-white, 300, 1px, 1.5);
-              resize: none;
-            }
-          }
-        }
-
-        .button {
-          @include grid-wraper(2, 3, auto, auto);
-          margin-top: -5px;
-          text-align: center;
-          button {
-            @include button(40px, 130px, $color-spot, 1px, $color-spot, 10px);
-            @include font(13px, $color-white, 300, 1px, normal);
-          }
+      .container-map:hover{
+        filter: grayscale(0%) saturate(100%);
+        iframe{
+          opacity: 1;
         }
       }
+     
+      
     }
-
     .copyright {
       @include grid-wraper(2, 3, auto, auto);
+      border-top: 1px solid #f7f8f8;
+      padding-top: 10px;
+      padding-bottom: 10px;
       .text {
-        border-top: 1px solid $color-white;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        float: right;
+        display: inline-block;
         text-align: right;
         @include font(14px, $color-white, 300, 1px, normal);
       }
     }
   }
 }
-
 .contact-tablet {
   @include grid(100%, auto);
   background-color: $color-dark;
   .par {
-    @include grid(minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto), auto);
+    @include grid(
+      minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto),
+      auto
+    );
     border-top: 1px solid #dadada;
     .main {
       @include grid-wraper(2, 3, auto, auto);
@@ -1510,7 +2215,6 @@ nav {
         margin-top: 12px;
         @include font(25px, $color-white, 500, 2px, normal);
       }
-
       .text {
         margin-top: 20px;
         text-align: center;
@@ -1518,42 +2222,52 @@ nav {
       }
     }
   }
-
   .container-big {
     padding-top: 10px;
-    @include grid(minmax(10px, auto) minmax(200px, 1400px) minmax(10px, auto), auto);
+    @include grid(
+      minmax(10px, auto) minmax(200px, 1400px) minmax(10px, auto),
+      auto
+    );
     .information-form {
       @include grid-wraper(2, 3, auto, auto);
       @include grid(calc(100% / 2) calc(100% / 2), auto);
       .information {
-        border-top: 1px solid $color-white;
         @include grid-wraper(1, 3, auto, auto);
-        @include grid(minmax(10px, auto) minmax(250px, calc(100% - 30px)) minmax(10px, auto), auto);
+        @include grid(
+          minmax(10px, auto) minmax(250px, calc(100% - 30px)) minmax(10px, auto),
+          auto
+        );
         .container {
-          margin-top: 20px;
-          @include grid-wraper(2, 3, auto, auto);
+          background: rgba(255,255,255,0.05);
+          padding-top: 20px;
+          @include grid-wraper(1, 4, auto, auto);
           text-align: center;
           .logo {
             display: inline-block;
             .img {
               margin-left: -73px;
-              @include img("117", "aleph_logo_ver1.svg", 21px, 25px, 21px, 25px);
+              @include img(
+                "117",
+                "aleph_logo_ver1.svg",
+                21px,
+                25px,
+                21px,
+                25px
+              );
             }
-
             .text {
               position: relative;
               display: inline-block;
               padding-left: 3px;
               @include grid-element(start, center);
               @include font(18px, $color-spot, 400, 3px, normal);
-              span{
+              span {
                 position: absolute;
                 top: -20px;
                 left: 6px;
               }
             }
           }
-
           .mail {
             margin-top: 15px;
             @include font(15px, $color-white, 300, 1px, normal);
@@ -1564,7 +2278,6 @@ nav {
               @include font(15px, $color-white, 300, 1px, normal);
             }
           }
-
           .address {
             margin-top: 15px;
             @include font(15px, $color-white, 300, 1px, normal);
@@ -1574,123 +2287,91 @@ nav {
             .text {
             }
           }
-
           .social {
             margin-top: 20px;
             margin-bottom: 20px;
             .facebook {
-              margin-right: 15px;
-              @include img("117", "icon_facebook_ver1.svg", 28px, 28px, 28px, auto);
+              @include img(
+                "117",
+                "icon_facebook_ver1.svg",
+                28px,
+                28px,
+                28px,
+                auto
+              );
               cursor: pointer;
             }
-
             .twiter {
               margin-right: 15px;
-              @include img("117", "icon_twitter_ver1.svg", 28px, 28px, 28px, auto);
+              @include img(
+                "117",
+                "icon_twitter_ver1.svg",
+                28px,
+                28px,
+                28px,
+                auto
+              );
               cursor: pointer;
             }
-
             .google {
-              @include img("117", "icon_google+_ver1.svg", 43px, 28px, 43px, 28px);
+              @include img(
+                "117",
+                "icon_google+_ver1.svg",
+                43px,
+                28px,
+                43px,
+                28px
+              );
               cursor: pointer;
             }
           }
         }
       }
 
-      .forms-1 {
-        @include grid(minmax(10px, auto) minmax(250px, 300px) minmax(10px, auto), auto);
-        .form {
-          @include grid-wraper(2, 3, auto, auto);
-          margin-bottom: 40px;
-          text-align: center;
-          .container {
-            //width: 100%;
-            //margin: 0px auto;
-            position: relative;
-            .title {
-              position: absolute;
-              left: -2px;
-              top: -11px;
-              padding-right: 9px;
-              padding-bottom: 1px;
-              background-color: $color-dark;
-              @include font(13px, $color-white, 300, 1px, 1.5);
-            }
-
-            input {
-              height: 42px;
-              width: calc(100% - 32px);
-              border: 1px solid $color-white;
-              background-color: $color-dark;
-              padding: 0px 14px;
-              @include font(14px, $color-white, 300, 1px, 1.5);
-            }
-          }
+      .container-map{
+        @include grid-wraper(1, 3, auto, auto);
+        @include grid(100%, auto);
+        margin-bottom: 30px;
+        -webkit-filter: grayscale(74%) saturate(100%);
+        filter: grayscale(74%) saturate(100%);
+        
+        iframe{
+          width: 100%;
+          height: 227px;
+          opacity: 0.9;
+          
         }
       }
-
-      .forms-2 {
-        @include grid(minmax(10px, auto) minmax(250px, 300px) minmax(10px, auto), auto);
-        .form {
-          @include grid-wraper(2, 3, auto, auto);
-          text-align: center;
-          .container {
-            //width: 90%;
-            //margin: 0px auto;
-            position: relative;
-            .title {
-              position: absolute;
-              left: -2px;
-              top: -11px;
-              padding-right: 9px;
-              padding-bottom: 1px;
-              background-color: $color-dark;
-              @include font(13px, $color-white, 300, 1px, 1.5);
-            }
-
-            textarea {
-              height: 116px;
-              width: calc(100% - 32px);
-              border: 1px solid $color-white;
-              background-color: $color-dark;
-              padding: 10px 14px;
-              @include font(14px, $color-white, 300, 1px, 1.5);
-              resize: none;
-            }
-          }
-        }
-
-        .button {
-          @include grid-wraper(2, 3, auto, auto);
-          margin-top: -5px;
-          text-align: center;
-          button {
-            @include button(40px, 130px, $color-spot, 1px, $color-spot, 10px);
-            @include font(13px, $color-white, 300, 1px, normal);
-          }
+      .container-map:hover{
+        filter: grayscale(0%) saturate(100%);
+        iframe{
+          opacity: 1;
         }
       }
+      
     }
-
     .copyright {
       @include grid-wraper(2, 3, auto, auto);
+      border-top: 1px solid #f7f8f8;
+      padding-top: 10px;
+      padding-bottom: 10px;
       .text {
-        border-top: 1px solid $color-white;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        float: right;
+        display: inline-block;
         text-align: right;
         @include font(14px, $color-white, 300, 1px, normal);
       }
     }
   }
 }
-
 .contact-mob {
   @include grid(100%, auto);
   background-color: $color-dark;
   .par {
-    @include grid(minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto), auto);
+    @include grid(
+      minmax(10px, auto) minmax(200px, 1000px) minmax(10px, auto),
+      auto
+    );
     border-top: 1px solid #dadada;
     .main {
       @include grid-wraper(2, 3, auto, auto);
@@ -1701,7 +2382,6 @@ nav {
         margin-top: 12px;
         @include font(25px, $color-white, 500, 2px, normal);
       }
-
       .text {
         margin-top: 20px;
         text-align: center;
@@ -1709,15 +2389,20 @@ nav {
       }
     }
   }
-
   .container-big {
     padding-top: 10px;
-    @include grid(minmax(10px, auto) minmax(200px, 1400px) minmax(10px, auto), auto);
+    @include grid(
+      minmax(10px, auto) minmax(200px, 1400px) minmax(10px, auto),
+      auto
+    );
     .information-form {
       @include grid-wraper(2, 3, auto, auto);
       @include grid(100%, auto);
       .information {
-        @include grid(minmax(10px, auto) minmax(250px, calc(100% - 30px)) minmax(10px, auto), auto);
+        @include grid(
+          minmax(10px, auto) minmax(250px, calc(100% - 30px)) minmax(10px, auto),
+          auto
+        );
         margin-top: 30px;
         padding-top: 20px;
         border-top: 1px solid $color-white;
@@ -1728,23 +2413,28 @@ nav {
             display: inline-block;
             .img {
               margin-left: -73px;
-              @include img("117", "aleph_logo_ver1.svg", 21px, 25px, 21px, 25px);
+              @include img(
+                "117",
+                "aleph_logo_ver1.svg",
+                21px,
+                25px,
+                21px,
+                25px
+              );
             }
-
             .text {
               position: relative;
               display: inline-block;
               padding-left: 3px;
               @include grid-element(start, center);
               @include font(18px, $color-spot, 400, 3px, normal);
-              span{
+              span {
                 position: absolute;
                 top: -20px;
                 left: 6px;
               }
             }
           }
-
           .mail {
             margin-top: 15px;
             @include font(15px, $color-white, 300, 1px, normal);
@@ -1755,7 +2445,6 @@ nav {
               @include font(15px, $color-white, 300, 1px, normal);
             }
           }
-
           .address {
             margin-top: 15px;
             @include font(15px, $color-white, 300, 1px, normal);
@@ -1765,40 +2454,60 @@ nav {
             .text {
             }
           }
-
           .social {
             margin-top: 20px;
             margin-bottom: 20px;
             margin-left: 7px;
             .facebook {
               margin-right: 15px;
-              @include img("117", "icon_facebook_ver1.svg", 28px, 28px, 28px, auto);
+              @include img(
+                "117",
+                "icon_facebook_ver1.svg",
+                28px,
+                28px,
+                28px,
+                auto
+              );
               cursor: pointer;
             }
-
             .twiter {
               margin-right: 15px;
-              @include img("117", "icon_twitter_ver1.svg", 28px, 28px, 28px, auto);
+              @include img(
+                "117",
+                "icon_twitter_ver1.svg",
+                28px,
+                28px,
+                28px,
+                auto
+              );
               cursor: pointer;
             }
-
             .google {
-              @include img("117", "icon_google+_ver1.svg", 43px, 28px, 43px, 28px);
+              @include img(
+                "117",
+                "icon_google+_ver1.svg",
+                43px,
+                28px,
+                43px,
+                28px
+              );
               cursor: pointer;
             }
           }
         }
       }
-
       .forms-1 {
-        @include grid(minmax(10px, auto) minmax(250px, 300px) minmax(10px, auto), auto);
+        @include grid(
+          minmax(10px, auto) minmax(250px, 300px) minmax(10px, auto),
+          auto
+        );
         .form {
           @include grid-wraper(2, 3, auto, auto);
           margin-bottom: 40px;
           text-align: center;
           .container {
-            //width: 100%;
-            //margin: 0px auto;
+            // width: 100%;
+            // margin: 0px auto;
             position: relative;
             .title {
               position: absolute;
@@ -1809,7 +2518,6 @@ nav {
               background-color: $color-dark;
               @include font(13px, $color-white, 300, 1px, 1.5);
             }
-
             input {
               height: 42px;
               width: calc(100% - 32px);
@@ -1821,15 +2529,17 @@ nav {
           }
         }
       }
-
       .forms-2 {
-        @include grid(minmax(10px, auto) minmax(250px, 300px) minmax(10px, auto), auto);
+        @include grid(
+          minmax(10px, auto) minmax(250px, 300px) minmax(10px, auto),
+          auto
+        );
         .form {
           @include grid-wraper(2, 3, auto, auto);
           text-align: center;
           .container {
-            //width: 90%;
-            //margin: 0px auto;
+            // width: 90%;
+            // margin: 0px auto;
             position: relative;
             .title {
               position: absolute;
@@ -1840,7 +2550,6 @@ nav {
               background-color: $color-dark;
               @include font(13px, $color-white, 300, 1px, 1.5);
             }
-
             textarea {
               height: 116px;
               width: calc(100% - 32px);
@@ -1852,7 +2561,6 @@ nav {
             }
           }
         }
-
         .button {
           @include grid-wraper(2, 3, auto, auto);
           text-align: center;
@@ -1864,7 +2572,6 @@ nav {
         }
       }
     }
-
     .copyright {
       @include grid-wraper(2, 3, auto, auto);
       .text {
@@ -1877,17 +2584,12 @@ nav {
     }
   }
 }
-
-
-
 // ----------------------------------------------------------
-//  Responsive
+// Responsive
 // ----------------------------------------------------------
-
 // > 820
-
-//contact
-@media #{$wide}{
+// contact
+@media #{$wide} {
   .contact {
     display: block;
   }
@@ -1898,8 +2600,8 @@ nav {
     display: none;
   }
 }
-//course
-@media #{$wide}{
+// course
+@media #{$wide} {
   .course {
     display: block;
   }
@@ -1907,8 +2609,8 @@ nav {
     display: none;
   }
 }
-//gallery
-@media  #{$wide}{
+// gallery
+@media #{$wide} {
   .gallery {
     display: grid;
   }
@@ -1916,11 +2618,9 @@ nav {
     display: none;
   }
 }
-
 // < 820
-
-//contact
-@media  #{$tablet}{
+// contact
+@media #{$tablet} {
   .contact {
     display: none;
   }
@@ -1931,9 +2631,8 @@ nav {
     display: none;
   }
 }
-
-//gallery
-@media  #{$tablet}{
+// gallery
+@media #{$tablet} {
   .gallery {
     display: none;
   }
@@ -1941,11 +2640,9 @@ nav {
     display: block;
   }
 }
-
 // < 620
-
-//nav
-@media  #{$mob} {
+// nav
+@media #{$mob} {
   nav {
     @include grid(100%, auto);
     .container-nav {
@@ -1958,15 +2655,12 @@ nav {
           .img {
           }
         }
-
         .title {
         }
       }
-
       .links {
         display: none;
       }
-
       .menu-button {
         justify-self: end;
         align-self: center;
@@ -1979,26 +2673,24 @@ nav {
     }
   }
 }
-//header
+// header
 @media #{$mob} {
   .header {
     @include grid(100%, auto);
-
     margin: 0;
     padding: 0;
     height: 100vh;
-
     background-color: $color-dark;
-
     .main {
-      @include grid(minmax(10px, auto) minmax(200px, 80%) minmax(10px, auto), auto);
+      @include grid(
+        minmax(10px, auto) minmax(200px, 80%) minmax(10px, auto),
+        auto
+      );
       @include background-img("117", "header_background_ver1.jpg", auto, auto);
       padding-top: 60px;
-
       .header {
         display: none;
       }
-
       .content {
         align-self: center;
         @include grid-wraper(2, 3, auto, auto);
@@ -2010,19 +2702,22 @@ nav {
               @include font(7vw, $color-spot, 500, 4px, 0);
             }
           }
+          .title-mob{
+            display: block;
+          }
+          .title-wide{
+            display: none;
+          }
         }
-
         .phrase {
           text-align: center;
           margin-top: 20px;
           @include font(17px, $color-white, 300, 1px, 1.7);
         }
-
         .buttons {
           text-align: center;
           margin-top: 35px;
           display: grid;
-
           .btn-1 {
             margin-right: 0;
             justify-self: center;
@@ -2038,14 +2733,13 @@ nav {
         }
       }
     }
-
     .footer {
       display: none;
     }
   }
 }
-//course
-@media  #{$mob}{
+// course
+@media #{$mob} {
   .course {
     display: none;
   }
@@ -2053,8 +2747,8 @@ nav {
     display: block;
   }
 }
-//gallery
-@media  #{$mob}{
+// gallery
+@media #{$mob} {
   .gallery {
     display: none;
   }
@@ -2062,27 +2756,27 @@ nav {
     display: block;
   }
 }
-//contact
-@media  #{$mob}{
+// contact
+@media #{$mob} {
   .contact {
     display: none;
   }
   .contact-tablet {
-    display: none;
-  }
-  .contact-mob {
     display: block;
   }
+  .contact-mob {
+    display: none;
+  }
 }
-//experiences
-@media  #{$mob}{
+// experiences
+@media #{$mob} {
   .experiences {
     .main {
       @include grid(50px auto 50px, auto);
       .left {
         justify-self: left;
         .icon-left {
-        margin-top: 35px;
+          margin-top: 35px;
           @include img("117", "leftlongline_ver1.svg", 30px, 28px, 43px, 28px);
           background-position: center left;
         }
@@ -2090,7 +2784,7 @@ nav {
       .right {
         justify-self: right;
         .icon-right {
-        margin-top: 35px;
+          margin-top: 35px;
           @include img("117", "rightlongline_ver1.svg", 30px, 28px, 43px, 28px);
           background-position: center right;
         }
@@ -2098,15 +2792,15 @@ nav {
     }
   }
 }
-
 // special
-
 // Company 620 - 720
 @media only screen and (min-width: 620px) and (max-width: 720px) {
   .company {
     background-color: $color-dark;
-    @include grid(minmax(15px, auto) minmax(200px, 1000px) minmax(15px, auto), auto);
-
+    @include grid(
+      minmax(15px, auto) minmax(200px, 1000px) minmax(15px, auto),
+      auto
+    );
     .main {
       .container-company {
         @include grid(33% 33% 33%, auto);
@@ -2114,7 +2808,7 @@ nav {
         cursor: pointer;
         .frame {
           @include grid(auto, calc(100% - 30px) 30px);
-          margin-top:15px;
+          margin-top: 15px;
           margin-bottom: 15px;
           .logo {
             margin-bottom: -3px;
@@ -2133,8 +2827,10 @@ nav {
 @media only screen and (min-width: 100px) and (max-width: 619px) {
   .company {
     background-color: $color-dark;
-    @include grid(minmax(15px, auto) minmax(200px, 1000px) minmax(15px, auto), auto);
-
+    @include grid(
+      minmax(15px, auto) minmax(200px, 1000px) minmax(15px, auto),
+      auto
+    );
     .main {
       .container-company {
         @include grid(50% 50%, auto);
@@ -2142,7 +2838,7 @@ nav {
         cursor: pointer;
         .frame {
           @include grid(auto, calc(100% - 30px) 30px);
-          margin-top:15px;
+          margin-top: 15px;
           margin-bottom: 15px;
           .logo {
             margin-bottom: 0px;
@@ -2158,7 +2854,7 @@ nav {
   }
 }
 // experiences 0 - 430
-@media only screen and (max-width: 430px){
+@media only screen and (max-width: 430px) {
   .experiences {
     .main {
       .container-students {
@@ -2177,151 +2873,212 @@ nav {
     }
   }
 }
-
 // ----------------------------------------------------------
-//  Exchangeable
+// Exchangeable
 // ----------------------------------------------------------
-
 // Training program
-
 #level-startfirst {
   @include img("117", "icon_startfirst_ver1.svg", 100px, 100px, 100px, auto);
 }
-
 #level-basicprogramming {
-  @include img("117", "icon_basicprogramming_ver1.svg", 100px, 100px, 100px, auto);
+  @include img(
+    "117",
+    "icon_basicprogramming_ver1.svg",
+    100px,
+    100px,
+    100px,
+    auto
+  );
 }
-
 #level-objectprogramming {
-  @include img("117", "icon_objectprogramming_ver1.svg", 100px, 100px, 100px, auto);
+  @include img(
+    "117",
+    "icon_objectprogramming_ver1.svg",
+    100px,
+    100px,
+    100px,
+    auto
+  );
 }
-
 #level-database {
   @include img("117", "icon_database_ver1.svg", 100px, 100px, 100px, auto);
 }
-
 #level-html {
   @include img("117", "icon_html_ver1.svg", 100px, 100px, 100px, auto);
 }
-
 #level-css {
   @include img("117", "icon_css_ver1.svg", 100px, 100px, 100px, auto);
 }
-
 #level-javascript {
   @include img("117", "icon_javascript_ver1.svg", 100px, 100px, 100px, auto);
 }
-
 #level-startsecond {
   @include img("117", "icon_startsecond_ver1.svg", 100px, 100px, 100px, auto);
 }
-
 #level-git {
   @include img("117", "icon_git_ver1.svg", 100px, 100px, 100px, auto);
 }
-
 #level-spring {
   @include img("117", "icon_spring_ver1.svg", 100px, 100px, 100px, auto);
 }
-
 #level-angular {
   @include img("117", "icon_angular_ver1.svg", 100px, 100px, 100px, auto);
 }
-
 #level-test {
   @include img("117", "icon_test_ver1.svg", 100px, 100px, 100px, auto);
 }
-
 // Partners
-
 #leviNine {
-  @include img("Company", "leviNine_logo_white_ver1.png", 140px, 60px, 125px, auto);
+  @include img(
+    "Company",
+    "leviNine_logo_white_ver1.png",
+    140px,
+    60px,
+    125px,
+    auto
+  );
 }
-
 #leviNine:hover {
   @include img("Company", "leviNine_logo_o_ver1.png", 140px, 60px, 125px, auto);
 }
-
 #execom {
-  @include img("Company", "execom_logo_white_ver1.png", 140px, 60px, 125px, auto);
+  @include img(
+    "Company",
+    "execom_logo_white_ver1.png",
+    140px,
+    60px,
+    125px,
+    auto
+  );
 }
-
 #execom:hover {
   @include img("Company", "execom_logo_o_ver1.png", 140px, 60px, 125px, auto);
 }
-
 #vivify {
-  @include img("Company", "vivify_logo_white_ver1.png", 140px, 60px, 125px, auto);
+  @include img(
+    "Company",
+    "vivify_logo_white_ver1.png",
+    140px,
+    60px,
+    125px,
+    auto
+  );
 }
-
 #vivify:hover {
   @include img("Company", "vivify_logo_o_ver1.png", 140px, 60px, 125px, auto);
 }
-
 #exlrt {
-  @include img("Company", "exlrt_logo_white_ver1.png", 140px, 60px, 125px, auto);
+  @include img(
+    "Company",
+    "exlrt_logo_white_ver1.png",
+    140px,
+    60px,
+    125px,
+    auto
+  );
 }
-
 #exlrt:hover {
   @include img("Company", "exlrt_logo_o_ver1.png", 140px, 60px, 125px, auto);
 }
-
 #itEngine {
-  @include img("Company", "itEngine_logo_white_ver1.png", 140px, 60px, 125px, auto);
+  @include img(
+    "Company",
+    "itEngine_logo_white_ver1.png",
+    140px,
+    60px,
+    125px,
+    auto
+  );
 }
-
 #itEngine:hover {
   @include img("Company", "itEngine_logo_o_ver1.png", 140px, 60px, 125px, auto);
 }
-
 #comData {
   margin-top: -15px;
-  @include img("Company", "comData_logo_white_ver1.png", 140px, 60px, 150px, auto);
+  @include img(
+    "Company",
+    "comData_logo_white_ver1.png",
+    140px,
+    60px,
+    150px,
+    auto
+  );
 }
-
 #comData:hover {
   margin-top: -15px;
   @include img("Company", "comData_logo_o_ver1.png", 140px, 60px, 150px, auto);
 }
-
 #mi {
   margin-top: -5px;
   @include img("Company", "mi_logo_white_ver1.png", 140px, 60px, 105px, auto);
 }
-
 #mi:hover {
   margin-top: -5px;
   @include img("Company", "mi_logo_o_ver1.png", 140px, 60px, 105px, auto);
 }
-
 #synechron {
-  @include img("Company", "synechron_logo_white_ver1.png", 140px, 60px, 125px, auto);
+  @include img(
+    "Company",
+    "synechron_logo_white_ver1.png",
+    140px,
+    60px,
+    125px,
+    auto
+  );
 }
-
 #synechron:hover {
-  @include img("Company", "synechron_logo_o_ver1.png", 140px, 60px, 125px, auto);
+  @include img(
+    "Company",
+    "synechron_logo_o_ver1.png",
+    140px,
+    60px,
+    125px,
+    auto
+  );
 }
-
 #naovis {
-  @include img("Company", "naovis_logo_white_ver1.png", 140px, 60px, 125px, auto);
+  @include img(
+    "Company",
+    "naovis_logo_white_ver1.png",
+    140px,
+    60px,
+    125px,
+    auto
+  );
 }
-
 #naovis:hover {
   @include img("Company", "naovis_logo_o_ver1.png", 140px, 60px, 125px, auto);
 }
-
 #intens {
-  @include img("Company", "intens_logo_white_ver1.png", 140px, 60px, 125px, auto);
+  @include img(
+    "Company",
+    "intens_logo_white_ver1.png",
+    140px,
+    60px,
+    125px,
+    auto
+  );
 }
-
 #intens:hover {
   @include img("Company", "intens_logo_o_ver1.png", 140px, 60px, 125px, auto);
 }
-
 #libraFire {
-  @include img("Company", "libraFire_logo_white_ver1.png", 140px, 60px, 125px, auto);
+  @include img(
+    "Company",
+    "libraFire_logo_white_ver1.png",
+    140px,
+    60px,
+    125px,
+    auto
+  );
 }
-
 #libraFire:hover {
-  @include img("Company", "libraFire_logo_o_ver1.png", 140px, 60px, 125px, auto);
+  @include img(
+    "Company",
+    "libraFire_logo_o_ver1.png",
+    140px,
+    60px,
+    125px,
+    auto
+  );
 }
