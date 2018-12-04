@@ -244,14 +244,18 @@ function loadPhoto() {
     }
   }
 
-  $([document.documentElement, document.body]).animate(
+
+
+
+}
+
+function positionPhoto(){
+    $([document.documentElement, document.body]).animate(
     {
       scrollTop: $(".gallery").offset().top - 45
     },
     200
   );
-
-
 }
 
 $("#gallery-pre-page").click(function() {
@@ -260,16 +264,19 @@ $("#gallery-pre-page").click(function() {
   }
   pageOfGallery = pageOfGallery - 1;
   loadPhoto();
+  positionPhoto();
 });
 
 $("#gallery-next-page").click(function() {
   if (warningLastPage) {
     warningLastPage = 0;
     loadPhoto();
+    
     return;
   }
   pageOfGallery = pageOfGallery + 1;
   loadPhoto();
+  positionPhoto();
 });
 
 

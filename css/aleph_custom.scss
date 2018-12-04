@@ -315,10 +315,12 @@ nav {
           margin-right: 30px;
           @include button(40px, 130px, $color-spot, 1px, $color-spot, 10px);
           @include font(13px, $color-white, 300, 1px, normal);
+          cursor: pointer;
         }
         .btn-2 {
           @include button(40px, 130px, transparent, 1px, $color-spot, 10px);
           @include font(13px, $color-white, 300, 1px, normal);
+          cursor: pointer;
         }
       }
     }
