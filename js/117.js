@@ -371,6 +371,7 @@ function goLeft(){
 }
 
 $('#scroll-right').hover(function() {
+  $("#scroll-company").animate().stop();
   int = setInterval(goRight, 10);
   },
   function() {clearInterval(int);
@@ -378,6 +379,7 @@ $('#scroll-right').hover(function() {
 );
 
 $('#scroll-left').hover(function() {
+  $("#scroll-company").animate().stop();
   int = setInterval(goLeft, 10);
   },
   function() {clearInterval(int);

@@ -446,6 +446,16 @@ nav {
           auto
         );
       }
+      .tiac {
+        @include img(
+          "Company",
+          "tiac_logo_ver1.png",
+          120px,
+          100px,
+          120px,
+          auto
+        );
+      }
     }
     .button-right {
       @include grid(100%, 100%);
@@ -1036,6 +1046,22 @@ nav {
       text-align: justify;
       text-align-last: center;
       @include font(15px, $color-text, 300, 1px, 1.5);
+    }
+    .book-img {
+      margin-top: 20px;
+      text-align: center;
+      .img {
+        @include img(
+          "117",
+          "book_img_ver1.png",
+          140px,
+          176px,
+          125px,
+          auto
+        );
+        cursor: pointer;
+      }
+      
     }
     .button {
       margin-top: 20px;
@@ -3084,3 +3110,26 @@ nav {
     auto
   );
 }
+
+#tiac {
+  @include img(
+    "Company",
+    "tiac_logo_white_ver1.png",
+    140px,
+    60px,
+    125px,
+    auto
+  );
+}
+#tiac:hover {
+  @include img(
+    "Company",
+    "tiac_logo_o_ver1.png",
+    140px,
+    60px,
+    125px,
+    auto
+  );
+}
+
+

@@ -205,6 +205,10 @@ companies:
   title: LibraFire
   number: 11
 
+- id: tiac
+  title: Tiac Group
+  number: 12
+
 # Students
 students:
 - id: 1
